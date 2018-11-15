@@ -12,6 +12,7 @@
 		59F0FCAD21921DE400DD5C78 /* YCC_comogo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59F0FCAB21921DE400DD5C78 /* YCC_comogo.xcdatamodeld */; };
 		59F0FCAF21921DE600DD5C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F0FCAE21921DE600DD5C78 /* Assets.xcassets */; };
 		59F0FCB221921DE600DD5C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59F0FCB021921DE600DD5C78 /* LaunchScreen.storyboard */; };
+		63371092219DFEDF00C8B16E /* YCCEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63371091219DFEDF00C8B16E /* YCCEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		59F0FCAE21921DE600DD5C78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59F0FCB121921DE600DD5C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59F0FCB321921DE600DD5C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63371091219DFEDF00C8B16E /* YCCEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCCEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				59F0FCA421921DE400DD5C78 /* AppDelegate.swift */,
+				63371091219DFEDF00C8B16E /* YCCEvent.swift */,
 				59F0FCA821921DE400DD5C78 /* Main.storyboard */,
 				59F0FCAE21921DE600DD5C78 /* Assets.xcassets */,
 				59F0FCB021921DE600DD5C78 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63371092219DFEDF00C8B16E /* YCCEvent.swift in Sources */,
 				59F0FCA521921DE400DD5C78 /* AppDelegate.swift in Sources */,
 				59F0FCAD21921DE400DD5C78 /* YCC_comogo.xcdatamodeld in Sources */,
 			);
