@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Youth_Community_Coalition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YCC_comogo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,22 +54,6 @@
                                 <color key="textColor" red="0.0" green="0.12074341499651529" blue="0.76720369170984459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RBHS" translatesAutoresizingMaskIntoConstraints="NO" id="ySa-LL-WGN">
-                                <rect key="frame" x="0.0" y="129" width="414" height="168"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5J-Ct-v48">
-                                <rect key="frame" x="0.0" y="302" width="414" height="23.333333333333314"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Charity Concert at Rock Bridge High School">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.12074341500000001" blue="0.76720369170000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="20" name=".SFNSDisplay"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfD-bY-v1C">
                                 <rect key="frame" x="225" y="564" width="169" height="61"/>
                                 <color key="backgroundColor" red="0.059738877574717214" green="0.44153444430371025" blue="0.068782254471930315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,50 +67,60 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2g-Ub-5hE">
-                                <rect key="frame" x="0.0" y="333" width="414" height="193"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <attributedString key="attributedText">
-                                    <fragment content="Rock Bridge High School 4303 S Providence Rd, Columbia, MO 65203">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="14"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
-                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jZM-nM-wRn">
+                                <rect key="frame" x="0.0" y="130" width="414" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Hwn-Zp-Qbc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Address, City, State, Zip Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYU-XQ-qgE">
+                                <rect key="frame" x="10" y="292" width="394" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charity Concert at Rock Bridge High School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCm-rP-30g">
+                                <rect key="frame" x="10" y="263" width="394" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoy-b2-G6m">
+                                <rect key="frame" x="10" y="362.33333333333331" width="394" height="196.66666666666669"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="G5J-Ct-v48" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0PS-rH-g8R"/>
-                            <constraint firstItem="Q2g-Ub-5hE" firstAttribute="top" secondItem="G5J-Ct-v48" secondAttribute="bottom" constant="7.6666666666666856" id="0WT-PO-Vds"/>
+                            <constraint firstItem="jZM-nM-wRn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="013-jq-dWe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w5w-hD-G8Z" secondAttribute="trailing" constant="219" id="1yc-cC-c22"/>
-                            <constraint firstItem="ySa-LL-WGN" firstAttribute="top" secondItem="rHa-bl-mdh" secondAttribute="bottom" constant="-1" id="4fn-kh-gLf"/>
                             <constraint firstItem="rfD-bY-v1C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="225" id="4hV-eq-KNt"/>
+                            <constraint firstItem="DYU-XQ-qgE" firstAttribute="top" secondItem="YCm-rP-30g" secondAttribute="bottom" constant="5" id="7ya-uH-bqN"/>
                             <constraint firstItem="lWF-qN-b9O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9uW-3A-TYO"/>
+                            <constraint firstItem="jZM-nM-wRn" firstAttribute="top" secondItem="rHa-bl-mdh" secondAttribute="bottom" id="Fv7-Ma-R9P"/>
+                            <constraint firstItem="DYU-XQ-qgE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="GLI-DJ-A04"/>
                             <constraint firstItem="lWF-qN-b9O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I1F-8l-Etf"/>
+                            <constraint firstItem="w5w-hD-G8Z" firstAttribute="top" secondItem="yoy-b2-G6m" secondAttribute="bottom" constant="5" id="MPh-UZ-mbP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r6a-e8-FaT" secondAttribute="bottom" constant="27" id="Me0-w5-QBJ"/>
                             <constraint firstItem="rfD-bY-v1C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="225" id="OKo-aX-OHB"/>
+                            <constraint firstItem="yoy-b2-G6m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="U6I-bw-Fqs"/>
                             <constraint firstItem="rHa-bl-mdh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xlj-zI-odW"/>
                             <constraint firstItem="w5w-hD-G8Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZdR-nJ-57q"/>
-                            <constraint firstItem="G5J-Ct-v48" firstAttribute="top" secondItem="ySa-LL-WGN" secondAttribute="bottom" constant="5" id="dFD-tS-WNY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yoy-b2-G6m" secondAttribute="trailing" constant="10" id="aIy-uJ-MWX"/>
+                            <constraint firstAttribute="trailing" secondItem="DYU-XQ-qgE" secondAttribute="trailing" constant="10" id="caY-mP-axy"/>
+                            <constraint firstItem="yoy-b2-G6m" firstAttribute="top" secondItem="DYU-XQ-qgE" secondAttribute="bottom" constant="50" id="cp6-0k-zxy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YCm-rP-30g" secondAttribute="trailing" constant="10" id="eNO-aX-JEq"/>
                             <constraint firstItem="r6a-e8-FaT" firstAttribute="top" secondItem="rfD-bY-v1C" secondAttribute="bottom" constant="23" id="grN-BA-bzZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r6a-e8-FaT" secondAttribute="trailing" constant="20" id="h5t-Rd-x5I"/>
                             <constraint firstItem="r6a-e8-FaT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j1F-Yc-4Gg"/>
                             <constraint firstItem="rHa-bl-mdh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jUv-Xd-lOX"/>
-                            <constraint firstItem="G5J-Ct-v48" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lAa-9I-bHJ"/>
-                            <constraint firstItem="ySa-LL-WGN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nJX-Bk-t9L"/>
                             <constraint firstItem="r6a-e8-FaT" firstAttribute="top" secondItem="w5w-hD-G8Z" secondAttribute="bottom" constant="23" id="oB6-NA-yvi"/>
                             <constraint firstItem="rHa-bl-mdh" firstAttribute="top" secondItem="lWF-qN-b9O" secondAttribute="bottom" id="p1w-bn-0WA"/>
+                            <constraint firstItem="YCm-rP-30g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="pbd-ZC-NXl"/>
                             <constraint firstItem="lWF-qN-b9O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="poH-rV-OTn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfD-bY-v1C" secondAttribute="trailing" constant="20" id="qFT-79-Lup"/>
-                            <constraint firstItem="ySa-LL-WGN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vIC-NU-Zfb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZM-nM-wRn" secondAttribute="trailing" id="qNf-vB-TB3"/>
+                            <constraint firstItem="YCm-rP-30g" firstAttribute="top" secondItem="jZM-nM-wRn" secondAttribute="bottom" constant="5" id="weA-QM-fXr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -138,6 +131,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="RBHS" width="300" height="168"/>
+        <image name="placeholder.jpg" width="1920" height="1280"/>
     </resources>
 </document>

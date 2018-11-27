@@ -12,6 +12,7 @@
 		59F0FCAD21921DE400DD5C78 /* YCC_comogo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59F0FCAB21921DE400DD5C78 /* YCC_comogo.xcdatamodeld */; };
 		59F0FCAF21921DE600DD5C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F0FCAE21921DE600DD5C78 /* Assets.xcassets */; };
 		59F0FCB221921DE600DD5C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59F0FCB021921DE600DD5C78 /* LaunchScreen.storyboard */; };
+		6B5579B721ADD19E0063A910 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5579B621ADD19E0063A910 /* placeholder.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		59F0FCAE21921DE600DD5C78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59F0FCB121921DE600DD5C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59F0FCB321921DE600DD5C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B5579B621ADD19E0063A910 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				59F0FCB021921DE600DD5C78 /* LaunchScreen.storyboard */,
 				59F0FCB321921DE600DD5C78 /* Info.plist */,
 				59F0FCAB21921DE400DD5C78 /* YCC_comogo.xcdatamodeld */,
+				6B5579B621ADD19E0063A910 /* placeholder.jpg */,
 			);
 			path = "YCC-comogo";
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59F0FCB221921DE600DD5C78 /* LaunchScreen.storyboard in Resources */,
+				6B5579B721ADD19E0063A910 /* placeholder.jpg in Resources */,
 				59F0FCAF21921DE600DD5C78 /* Assets.xcassets in Resources */,
 				59F0FCAA21921DE400DD5C78 /* Main.storyboard in Resources */,
 			);
