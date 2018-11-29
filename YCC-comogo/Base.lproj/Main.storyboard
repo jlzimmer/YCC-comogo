@@ -23,7 +23,7 @@
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6a-e8-FaT">
                                 <rect key="frame" x="20" y="659" width="374" height="62"/>
-                                <color key="backgroundColor" red="0.71653593299999996" green="0.72886359229999997" blue="0.7919685165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.63995951669999995" green="0.73644450770000003" blue="0.78648656610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="36"/>
                                 <state key="normal" title="My Events">
                                     <color key="titleColor" red="0.0" green="0.12074341500000001" blue="0.76720369170000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,7 +36,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5w-hD-G8Z">
                                 <rect key="frame" x="20" y="582" width="180" height="62"/>
-                                <color key="backgroundColor" red="0.71653593300777441" green="0.72886359234939857" blue="0.79196851653989631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.78648656606674194" green="0.56096486261054368" blue="0.51703314531154021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="close-circle">
                                     <color key="titleColor" red="0.83334682642487046" green="0.0" blue="0.0097042457783360417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -47,17 +47,17 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoMoGo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHa-bl-mdh">
-                                <rect key="frame" x="0.0" y="76" width="414" height="57.666666666666657"/>
-                                <color key="backgroundColor" red="0.71653593299999996" green="0.72886359229999997" blue="0.7919685165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="75" width="414" height="58"/>
+                                <color key="backgroundColor" red="0.77670389409999996" green="0.77609926460000001" blue="0.79607713219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
                                 <color key="textColor" red="0.0" green="0.12074341499651529" blue="0.76720369170984459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfD-bY-v1C">
                                 <rect key="frame" x="214" y="582" width="180" height="62"/>
-                                <color key="backgroundColor" red="0.71653593299999996" green="0.72886359229999997" blue="0.7919685165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.67846269930000003" green="0.78648656610000001" blue="0.5767667863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="heart (2)">
-                                    <color key="titleColor" red="0.11551127599365761" green="0.82301112823782385" blue="0.13509429525173638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.28826775214620304" green="0.91299391276945319" blue="0.17520856506963209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -66,19 +66,19 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RBHS" translatesAutoresizingMaskIntoConstraints="NO" id="jZM-nM-wRn">
-                                <rect key="frame" x="0.0" y="133.66666666666666" width="414" height="127.99999999999997"/>
+                                <rect key="frame" x="0.0" y="133" width="414" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Hwn-Zp-Qbc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 Providence Ave. Columbia, MO 65203" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYU-XQ-qgE">
-                                <rect key="frame" x="10" y="297.66666666666669" width="394" height="20.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 Providence Ave. Columbia, MO 65202" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYU-XQ-qgE">
+                                <rect key="frame" x="10" y="297" width="394" height="20.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCm-rP-30g">
-                                <rect key="frame" x="10" y="266.66666666666669" width="394" height="26"/>
+                                <rect key="frame" x="10" y="266" width="394" height="26"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Charity Concert at Rock Bridge High School">
                                         <attributes>
@@ -90,20 +90,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday November 28th, 2018: 7:00pm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-Ce-7bq">
-                                <rect key="frame" x="10" y="326" width="394" height="20.666666666666686"/>
+                                <rect key="frame" x="10" y="325.33333333333331" width="394" height="20.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EJn-ff-mLN">
-                                <rect key="frame" x="10" y="354" width="394" height="220"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Please join us for an awesome charity concert hosted at your very own Rock Bridge High School! Musical guests include Michael Jackson, Tupac, Bob Dylan, and Dale Musser. All proceeds for the concert will be donated to St. Jude Children's Research Hospital.   Ticket cost is $1,000,000 for one person  Please contact John Doe for more details regarding how you can see some great music and support a great cause at (555) 555-5555.</mutableString>
+                                <rect key="frame" x="10" y="353.33333333333331" width="394" height="220.66666666666669"/>
+                                <color key="backgroundColor" red="0.87453600217208816" green="0.87650688967329293" blue="0.90658236697157357" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <mutableString key="text">Please join us for an awesome charity concert hosted at your very own Rock Bridge High School! Musical guests include Michael Jackson, Tupac, Bob Dylan, and Dale Musser. All proceeds for the concert will be donated to St. Jude Children's Research Hospital.   Ticket cost is $1,000,000 for one person  Please contact John Doe for more details regarding how you can see some great music and support a great cause at (555) 555-5555.Please contact John Doe for more details regarding how you can see some great music and support a great cause at (555) 555-5555.Please contact John Doe for more details regarding how you can see some great music and support a great cause at (555) 555-5555.Please contact John Doe for more details regarding how you can see some great music and support a great cause at (555) 555-5555.</mutableString>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.77670389409999996" green="0.77609926460000001" blue="0.79607713219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jZM-nM-wRn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="013-jq-dWe"/>
@@ -127,7 +127,7 @@
                             <constraint firstItem="EJn-ff-mLN" firstAttribute="top" secondItem="0W8-Ce-7bq" secondAttribute="bottom" constant="7.3333333333333144" id="m80-q6-pA7"/>
                             <constraint firstItem="r6a-e8-FaT" firstAttribute="top" secondItem="w5w-hD-G8Z" secondAttribute="bottom" constant="15" id="oB6-NA-yvi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w5w-hD-G8Z" secondAttribute="trailing" constant="214" id="obY-Rm-Jki"/>
-                            <constraint firstItem="rHa-bl-mdh" firstAttribute="top" secondItem="lWF-qN-b9O" secondAttribute="bottom" id="p1w-bn-0WA"/>
+                            <constraint firstItem="rHa-bl-mdh" firstAttribute="top" secondItem="lWF-qN-b9O" secondAttribute="bottom" constant="-1" id="p1w-bn-0WA"/>
                             <constraint firstItem="YCm-rP-30g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="pbd-ZC-NXl"/>
                             <constraint firstItem="lWF-qN-b9O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="poH-rV-OTn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfD-bY-v1C" secondAttribute="trailing" constant="20" id="qFT-79-Lup"/>
