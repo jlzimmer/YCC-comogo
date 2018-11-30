@@ -18,6 +18,8 @@
 		C931E9CF21AF9C7E00CF8248 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931E9CE21AF9C7E00CF8248 /* EventTableViewCell.swift */; };
 		C9AF70FC21AFA48B00CC277B /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF70FB21AFA48B00CC277B /* EventDetailViewController.swift */; };
 		C9AF70FE21AFB27600CC277B /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF70FD21AFB27600CC277B /* HomePageViewController.swift */; };
+		C9AF710021B1A63900CC277B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF70FF21B1A63900CC277B /* MenuViewController.swift */; };
+		C9AF710221B1A8DA00CC277B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710121B1A8DA00CC277B /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C931E9CE21AF9C7E00CF8248 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		C9AF70FB21AFA48B00CC277B /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		C9AF70FD21AFB27600CC277B /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		C9AF70FF21B1A63900CC277B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C9AF710121B1A8DA00CC277B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				C931E9CE21AF9C7E00CF8248 /* EventTableViewCell.swift */,
 				C931E9CC21AF9B6D00CF8248 /* DummyEvents.swift */,
 				C9AF70FD21AFB27600CC277B /* HomePageViewController.swift */,
+				C9AF710121B1A8DA00CC277B /* BaseViewController.swift */,
+				C9AF70FF21B1A63900CC277B /* MenuViewController.swift */,
 				C9AF70FB21AFA48B00CC277B /* EventDetailViewController.swift */,
 				59F0FCA421921DE400DD5C78 /* AppDelegate.swift */,
 				59F0FCAE21921DE600DD5C78 /* Assets.xcassets */,
@@ -159,8 +165,10 @@
 				59F0FCA521921DE400DD5C78 /* AppDelegate.swift in Sources */,
 				C931E9CD21AF9B6D00CF8248 /* DummyEvents.swift in Sources */,
 				C931E9CB21AF9AB200CF8248 /* MyEventsViewController.swift in Sources */,
+				C9AF710221B1A8DA00CC277B /* BaseViewController.swift in Sources */,
 				C931E9CF21AF9C7E00CF8248 /* EventTableViewCell.swift in Sources */,
 				59F0FCAD21921DE400DD5C78 /* YCC_comogo.xcdatamodeld in Sources */,
+				C9AF710021B1A63900CC277B /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

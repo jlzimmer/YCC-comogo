@@ -8,11 +8,13 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController {
+class HomePageViewController: BaseViewController{
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addSlideMenuButton()
         // Do any additional setup after loading the view.
     }
    
