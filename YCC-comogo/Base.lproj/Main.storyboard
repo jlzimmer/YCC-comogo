@@ -41,8 +41,8 @@
                                 <rect key="frame" x="0.0" y="44" width="297" height="818"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wef-sW-VD4">
-                                        <rect key="frame" x="25" y="30" width="196" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <rect key="frame" x="25" y="30" width="206" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="View Declined Events">
                                             <color key="titleColor" red="1" green="0.97245151054397228" blue="0.17483597873145174" alpha="0.98367936643835618" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -51,19 +51,40 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbm-53-Z8c">
-                                        <rect key="frame" x="25" y="88" width="80" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <rect key="frame" x="25" y="88" width="85" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="Settings ">
+                                            <color key="titleColor" red="1" green="0.9724515105" blue="0.17483597870000001" alpha="0.98367936639999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9o0-ie-JN0">
+                                        <rect key="frame" x="25" y="146" width="178" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <state key="normal" title="Refresh All Events ">
+                                            <color key="titleColor" red="1" green="0.9724515105" blue="0.17483597870000001" alpha="0.98367936639999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMj-Bs-C1M">
+                                        <rect key="frame" x="25" y="204" width="76" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <state key="normal" title="Log Out">
                                             <color key="titleColor" red="1" green="0.9724515105" blue="0.17483597870000001" alpha="0.98367936639999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="gbm-53-Z8c" firstAttribute="top" secondItem="wef-sW-VD4" secondAttribute="bottom" constant="20" id="9em-iB-WDc"/>
                                     <constraint firstItem="gbm-53-Z8c" firstAttribute="leading" secondItem="ObT-sd-syn" secondAttribute="leading" constant="25" id="GPL-IH-IvW"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RMj-Bs-C1M" secondAttribute="trailing" constant="20" id="IMK-ND-jum"/>
+                                    <constraint firstItem="RMj-Bs-C1M" firstAttribute="top" secondItem="9o0-ie-JN0" secondAttribute="bottom" constant="20" id="KKu-E4-DiC"/>
+                                    <constraint firstItem="9o0-ie-JN0" firstAttribute="top" secondItem="gbm-53-Z8c" secondAttribute="bottom" constant="20" id="TUB-qZ-b6K"/>
                                     <constraint firstItem="wef-sW-VD4" firstAttribute="leading" secondItem="ObT-sd-syn" secondAttribute="leading" constant="25" id="btg-cL-hJ6"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wef-sW-VD4" secondAttribute="trailing" constant="10" id="ePA-Ge-K2v"/>
+                                    <constraint firstItem="RMj-Bs-C1M" firstAttribute="leading" secondItem="ObT-sd-syn" secondAttribute="leading" constant="25" id="eUm-Ce-h7x"/>
+                                    <constraint firstItem="9o0-ie-JN0" firstAttribute="leading" secondItem="ObT-sd-syn" secondAttribute="leading" constant="25" id="kiu-lv-Kwe"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9o0-ie-JN0" secondAttribute="trailing" constant="20" id="lYW-YT-aMl"/>
                                     <constraint firstItem="wef-sW-VD4" firstAttribute="top" secondItem="ObT-sd-syn" secondAttribute="top" constant="30" id="mwr-w9-swN"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gbm-53-Z8c" secondAttribute="trailing" constant="20" id="uz8-3R-kF5"/>
                                 </constraints>
