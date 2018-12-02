@@ -12,6 +12,8 @@
 		59F0FCAD21921DE400DD5C78 /* YCC_comogo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59F0FCAB21921DE400DD5C78 /* YCC_comogo.xcdatamodeld */; };
 		59F0FCAF21921DE600DD5C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F0FCAE21921DE600DD5C78 /* Assets.xcassets */; };
 		59F0FCB221921DE600DD5C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59F0FCB021921DE600DD5C78 /* LaunchScreen.storyboard */; };
+		63FB81C921B3A8E500A71AD3 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FB81C721B3A8E500A71AD3 /* Event+CoreDataClass.swift */; };
+		63FB81CA21B3A8E500A71AD3 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FB81C821B3A8E500A71AD3 /* Event+CoreDataProperties.swift */; };
 		6B5579B721ADD19E0063A910 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5579B621ADD19E0063A910 /* placeholder.jpg */; };
 		C931E9CB21AF9AB200CF8248 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931E9CA21AF9AB200CF8248 /* MyEventsViewController.swift */; };
 		C931E9CD21AF9B6D00CF8248 /* DummyEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931E9CC21AF9B6D00CF8248 /* DummyEvents.swift */; };
@@ -32,6 +34,8 @@
 		59F0FCAE21921DE600DD5C78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59F0FCB121921DE600DD5C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59F0FCB321921DE600DD5C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63FB81C721B3A8E500A71AD3 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		63FB81C821B3A8E500A71AD3 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6B5579B621ADD19E0063A910 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = SOURCE_ROOT; };
 		C931E9CA21AF9AB200CF8248 /* MyEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
 		C931E9CC21AF9B6D00CF8248 /* DummyEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyEvents.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		59F0FCA321921DE400DD5C78 /* YCC-comogo */ = {
 			isa = PBXGroup;
 			children = (
+				63FB81C721B3A8E500A71AD3 /* Event+CoreDataClass.swift */,
+				63FB81C821B3A8E500A71AD3 /* Event+CoreDataProperties.swift */,
 				59F0FCA821921DE400DD5C78 /* Main.storyboard */,
 				C931E9CA21AF9AB200CF8248 /* MyEventsViewController.swift */,
 				C9AF710321B1E9B400CC277B /* DeclinedEventsViewController.swift */,
@@ -172,10 +178,12 @@
 				C931E9CD21AF9B6D00CF8248 /* DummyEvents.swift in Sources */,
 				C931E9CB21AF9AB200CF8248 /* MyEventsViewController.swift in Sources */,
 				C9AF710221B1A8DA00CC277B /* BaseViewController.swift in Sources */,
+				63FB81CA21B3A8E500A71AD3 /* Event+CoreDataProperties.swift in Sources */,
 				C931E9CF21AF9C7E00CF8248 /* EventTableViewCell.swift in Sources */,
 				C9AF710421B1E9B400CC277B /* DeclinedEventsViewController.swift in Sources */,
 				C9AF710621B1EBDC00CC277B /* DeclinedEventDetailViewController.swift in Sources */,
 				59F0FCAD21921DE400DD5C78 /* YCC_comogo.xcdatamodeld in Sources */,
+				63FB81C921B3A8E500A71AD3 /* Event+CoreDataClass.swift in Sources */,
 				C9AF710021B1A63900CC277B /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
