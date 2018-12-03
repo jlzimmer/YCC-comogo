@@ -1,10 +1,4 @@
-//
-//  BaseViewController.swift
-//  AKSwiftSlideMenu
-//
-//  Created by Ashish on 21/09/15.
-//  Copyright (c) 2015 Kode. All rights reserved.
-//
+
 
 import UIKit
 
@@ -21,23 +15,19 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     }
     
     func slideMenuItemSelectedAtIndex(_index index: Int32) {
-        let topViewController : UIViewController = self.navigationController!.topViewController!
-        print("View Controller is : \(topViewController) \n", terminator: "")
+        let _ : UIViewController = self.navigationController!.topViewController!
         switch(index){
         case 0:
-            print("Home\n", terminator: "")
 
             self.openViewControllerBasedOnIdentifier("Home")
             
             break
         case 1:
-            print("Play\n", terminator: "")
-            
             self.openViewControllerBasedOnIdentifier("PlayVC")
             
             break
         default:
-            print("default\n", terminator: "")
+            break
         }
     }
     
@@ -47,7 +37,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         
         if (topViewController.restorationIdentifier! == destViewController.restorationIdentifier!){
-            print("Same VC")
+           
         } else {
             self.navigationController!.pushViewController(destViewController, animated: true)
         }

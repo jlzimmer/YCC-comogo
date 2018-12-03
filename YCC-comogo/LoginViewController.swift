@@ -10,10 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet var blueView: UIView!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let color1 = UIColor(rgb: 0x00688F)
@@ -30,12 +32,14 @@ class LoginViewController: UIViewController {
         password.layer.cornerRadius = 20
         password.clipsToBounds = true
         
-      
-       // navigationItem.accessibilityElementsHidden = true
+     
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
         loginBtn.backgroundColor = color2
         loginBtn.layer.cornerRadius = 25
         loginBtn.clipsToBounds = true
+        
+        registerBtn.setTitleColor(color1, for: .normal)
         
         blueView.backgroundColor = color1
     

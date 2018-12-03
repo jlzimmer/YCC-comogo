@@ -11,8 +11,8 @@ import UIKit
 class HomePageViewController: BaseViewController{
 
     @IBOutlet weak var eventTitle: UILabel!
-    
     @IBOutlet weak var myEventsBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
