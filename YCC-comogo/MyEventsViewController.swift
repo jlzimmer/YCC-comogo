@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MyEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,6 +17,8 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
     var dummyEvents: [DummyEvent]=[]
     var filteredEvents = [DummyEvent]()
     var searching = false
+    
+    var myEvents = [Event]() //Array of Event which matches our core data entity.
   
 
     override func viewDidLoad() {
@@ -37,6 +40,35 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        populateEvents()
+    }
+    
+    func populateEvents(){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let attendingStatus = "accepted"
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "acceptedStatus == %@", attendingStatus) //Queries our core data for only events that the user has accepted.
+        do {
+            myEvents = try managedContext.fetch(fetchRequest)
+            
+            eventsTableView.reloadData() //After fetching the events, it will reload the data.
+            //To do From a UI standpoint:
+            //Set the data cells to be fetched from core data.
+            
+            //This is successful, so, saving events to an accepted event works in theory.
+            print(myEvents.count)
+            //To do from a testing standpoint: Have some stored data source of accepted events, then do some other bulllllshit.
+        } catch {
+            print("Error: Fetch could not be performed")
+        }
+    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
