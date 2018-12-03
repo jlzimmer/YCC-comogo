@@ -22,6 +22,7 @@
 		C9AF710221B1A8DA00CC277B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710121B1A8DA00CC277B /* BaseViewController.swift */; };
 		C9AF710421B1E9B400CC277B /* DeclinedEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710321B1E9B400CC277B /* DeclinedEventsViewController.swift */; };
 		C9AF710621B1EBDC00CC277B /* DeclinedEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710521B1EBDC00CC277B /* DeclinedEventDetailViewController.swift */; };
+		C9AF710821B49A7400CC277B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710721B49A7400CC277B /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		C9AF710121B1A8DA00CC277B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C9AF710321B1E9B400CC277B /* DeclinedEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclinedEventsViewController.swift; sourceTree = "<group>"; };
 		C9AF710521B1EBDC00CC277B /* DeclinedEventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclinedEventDetailViewController.swift; sourceTree = "<group>"; };
+		C9AF710721B49A7400CC277B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				59F0FCA821921DE400DD5C78 /* Main.storyboard */,
+				C9AF710721B49A7400CC277B /* LoginViewController.swift */,
 				C931E9CA21AF9AB200CF8248 /* MyEventsViewController.swift */,
 				C9AF710321B1E9B400CC277B /* DeclinedEventsViewController.swift */,
 				C931E9CE21AF9C7E00CF8248 /* EventTableViewCell.swift */,
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AF710821B49A7400CC277B /* LoginViewController.swift in Sources */,
 				C9AF70FC21AFA48B00CC277B /* EventDetailViewController.swift in Sources */,
 				C9AF70FE21AFB27600CC277B /* HomePageViewController.swift in Sources */,
 				59F0FCA521921DE400DD5C78 /* AppDelegate.swift in Sources */,

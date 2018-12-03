@@ -11,6 +11,7 @@ import UIKit
 class MyEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
    
+
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var eventsTableView: UITableView!
     var dummyEvents: [DummyEvent]=[]
@@ -26,9 +27,10 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
         dummyEvents.append(DummyEvent(title: "Volunteer Event", startTime: "2:00pm", endTime:"4:00pm", location: "Downtown Columbia", pictureString: "e3"))
         dummyEvents.append(DummyEvent(title: "College Prep Corse", startTime: "6:00pm", endTime:"7:30pm", location: "Hickman HS", pictureString: "e4"))
        dummyEvents.append(DummyEvent(title: "Basketball Game", startTime: "6:30pm", endTime:"9:00pm", location: "Rockbridge HS", pictureString: "e5"))
-        navigationItem.largeTitleDisplayMode = .never
         
+        navigationItem.largeTitleDisplayMode = .never
         self.title = "My Events"
+
         self.eventsTableView.isHidden = true
         self.animateTable()
 
@@ -63,11 +65,16 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
             else{
                 cellEvent = dummyEvents[indexPath.row]
             }
+          //  let color1 = UIColor(rgb: 0x00688F)
+            let color2 = UIColor(rgb: 0xFFDD00)
+            let color3 = UIColor(rgb: 0x3286a5)
             cell.title.text = cellEvent.title
+            cell.title.textColor = color2
             cell.time.text = cellEvent.startTime
             cell.location.text = cellEvent.location
             cell.picture.image = UIImage(named: cellEvent.pictureString)
             cell.eventDate.text = "November 10, 2018  @"
+            cell.bgColor.backgroundColor = color3
             
             cell.layer.cornerRadius = 12
             cell.layer.masksToBounds = true

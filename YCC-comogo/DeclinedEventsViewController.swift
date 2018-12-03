@@ -61,11 +61,18 @@ class DeclinedEventsViewController: UIViewController, UITableViewDelegate, UITab
             else{
                 cellEvent = dummyEvents[indexPath.row]
             }
+           
+            
+            let color2 = UIColor(rgb: 0xFFDD00)
+            let color3 = UIColor(rgb: 0x3286a5)
             cell.title.text = cellEvent.title
+            cell.title.textColor = color2
             cell.time.text = cellEvent.startTime
             cell.location.text = cellEvent.location
             cell.picture.image = UIImage(named: cellEvent.pictureString)
             cell.eventDate.text = "November 10, 2018  @"
+            cell.bgColor2.backgroundColor = color3
+            
             
             cell.layer.cornerRadius = 12
             cell.layer.masksToBounds = true
