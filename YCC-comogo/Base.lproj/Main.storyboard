@@ -162,9 +162,6 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="demoSaveAcceptedEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARs-Qg-R3U"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RBHS" translatesAutoresizingMaskIntoConstraints="NO" id="jZM-nM-wRn">
                                 <rect key="frame" x="0.0" y="196" width="414" height="150"/>
