@@ -13,15 +13,24 @@ protocol SlideMenuDelegate {
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var viewDeclinedEvents: UIButton!
     @IBOutlet weak var menuView: UIView!
-    var btnMenu : UIButton!
+    @IBOutlet weak var settings: UIButton!
+    @IBOutlet weak var refresh: UIButton!
+    @IBOutlet weak var logOut: UIButton!
+    
+        var btnMenu : UIButton!
         var delegate: SlideMenuDelegate?
     
     
         override func viewDidLoad() {
         super.viewDidLoad()
-         //   let color2 = UIColor(rgb: 0xFFDD00)
+            let color2 = UIColor(rgb: 0xFFDD00)
             let color1 = UIColor(rgb: 0x00688F)
+            viewDeclinedEvents.setTitleColor(color2, for: .normal)
+            settings.setTitleColor(color2, for: .normal)
+            refresh.setTitleColor(color2, for: .normal)
+            logOut.setTitleColor(color2, for: .normal)
             menuView.backgroundColor = color1
         // Do any additional setup after loading the view.
     }

@@ -25,6 +25,8 @@
 		C9AF710221B1A8DA00CC277B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710121B1A8DA00CC277B /* BaseViewController.swift */; };
 		C9AF710421B1E9B400CC277B /* DeclinedEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710321B1E9B400CC277B /* DeclinedEventsViewController.swift */; };
 		C9AF710621B1EBDC00CC277B /* DeclinedEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710521B1EBDC00CC277B /* DeclinedEventDetailViewController.swift */; };
+		C9AF710821B49A7400CC277B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710721B49A7400CC277B /* LoginViewController.swift */; };
+		C9AF710A21B5DC9900CC277B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF710921B5DC9900CC277B /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		C9AF710121B1A8DA00CC277B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C9AF710321B1E9B400CC277B /* DeclinedEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclinedEventsViewController.swift; sourceTree = "<group>"; };
 		C9AF710521B1EBDC00CC277B /* DeclinedEventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclinedEventDetailViewController.swift; sourceTree = "<group>"; };
+		C9AF710721B49A7400CC277B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C9AF710921B5DC9900CC277B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +87,11 @@
 				63FB81C721B3A8E500A71AD3 /* Event+CoreDataClass.swift */,
 				63FB81C821B3A8E500A71AD3 /* Event+CoreDataProperties.swift */,
 				59F0FCA821921DE400DD5C78 /* Main.storyboard */,
+				C9AF710721B49A7400CC277B /* LoginViewController.swift */,
 				C931E9CA21AF9AB200CF8248 /* MyEventsViewController.swift */,
 				C9AF710321B1E9B400CC277B /* DeclinedEventsViewController.swift */,
 				C931E9CE21AF9C7E00CF8248 /* EventTableViewCell.swift */,
+				C9AF710921B5DC9900CC277B /* RegisterViewController.swift */,
 				C931E9CC21AF9B6D00CF8248 /* DummyEvents.swift */,
 				C9AF70FD21AFB27600CC277B /* HomePageViewController.swift */,
 				C9AF710121B1A8DA00CC277B /* BaseViewController.swift */,
@@ -175,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AF710821B49A7400CC277B /* LoginViewController.swift in Sources */,
 				C9AF70FC21AFA48B00CC277B /* EventDetailViewController.swift in Sources */,
 				C9AF70FE21AFB27600CC277B /* HomePageViewController.swift in Sources */,
 				59F0FCA521921DE400DD5C78 /* AppDelegate.swift in Sources */,
@@ -186,6 +193,7 @@
 				C931E9CF21AF9C7E00CF8248 /* EventTableViewCell.swift in Sources */,
 				C9AF710421B1E9B400CC277B /* DeclinedEventsViewController.swift in Sources */,
 				C9AF710621B1EBDC00CC277B /* DeclinedEventDetailViewController.swift in Sources */,
+				C9AF710A21B5DC9900CC277B /* RegisterViewController.swift in Sources */,
 				59F0FCAD21921DE400DD5C78 /* YCC_comogo.xcdatamodeld in Sources */,
 				63FB81C921B3A8E500A71AD3 /* Event+CoreDataClass.swift in Sources */,
 				C9AF710021B1A63900CC277B /* MenuViewController.swift in Sources */,

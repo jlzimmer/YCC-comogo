@@ -19,12 +19,23 @@ class DeclinedEventDetailViewController: UIViewController {
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var eventDes: UILabel!
+    @IBOutlet weak var addBtn: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let color1 = UIColor(rgb: 0x00688F)
+        let color2 = UIColor(rgb: 0xFFDD00)
+        
+        addBtn.backgroundColor = color2
+        addBtn.layer.cornerRadius = 25
+        addBtn.clipsToBounds = true
+        
+        
         picture.image=UIImage(named: (dummyEvents?.pictureString)!)
         eventTitle.text = dummyEvents?.title
+        eventTitle.textColor = color1
         let concatStartTime = (dummyEvents?.startTime)! + "  -"
         startTime.text = concatStartTime
         location.text = dummyEvents?.location

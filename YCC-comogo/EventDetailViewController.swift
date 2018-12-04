@@ -22,6 +22,11 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         let color1 = UIColor(rgb: 0x00688F)
+        //let color2 = UIColor(rgb: 0xFFDD00)
+       // let color3 = UIColor(rgb: 0x3286a5)
+
+        eventTitle.textColor = color1
         
         picture.image=UIImage(named: (dummyEvents?.pictureString)!)
         eventTitle.text = dummyEvents?.title

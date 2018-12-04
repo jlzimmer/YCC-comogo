@@ -10,6 +10,8 @@ import UIKit
 
 class EventTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var bgColor2: UIView!
+    @IBOutlet weak var bgColor: UIView!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var location: UILabel!
