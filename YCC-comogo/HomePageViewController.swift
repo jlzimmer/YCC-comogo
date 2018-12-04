@@ -7,9 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
+//Basic workflow as I see it:
+//App loads, makes request to API, API results are saved into core data.
+    // We should only be saving events who do not have an event with the same existent ID stored
+    // -> Then, we query core data to get the results that have a status of "undecided", place them into the
+    // myEvents array, and display them.
+//The table displays all events that have an accepted status of "undecided"
+//When the user clicks decline or accept, the event at that indexes accepted status is modified to the appropriate option
+//The view is reloaded, meaning we query for core data events that have a status of "undecided".
+//
 class HomePageViewController: BaseViewController{
-
+    
+    var myEvents = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,13 +71,57 @@ class HomePageViewController: BaseViewController{
     }
     
     //Edit event data so that it is favorited.
-    func acceptEvent(){
-        //TBD
+    func acceptEvent(index: Int){
+        let eventToBeModified = myEvents[index]
+        let ident = eventToBeModified.id!
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", ident)
+        do {
+            let grabbedEvent = try managedContext.fetch(fetchRequest)
+            if grabbedEvent.count != 0 {
+                let managedObject = grabbedEvent[0]
+                managedObject.setValue("accepted", forKey: "acceptedStatus")
+                do {
+                    try managedContext.save()
+                } catch {
+                    print("could not save managed context")
+                }
+            }
+        } catch {
+            print("event could not be modified")
+        }
+        
+        //fetch request for the event we want to change:
     }
     
     //Edit event data so that it is declined
-    func declineEvent(){
-        //TBD
+    func declineEvent(index: Int){
+        let eventToBeModified = myEvents[index]
+        let ident = eventToBeModified.id!
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", ident)
+        do {
+            let grabbedEvent = try managedContext.fetch(fetchRequest)
+            if grabbedEvent.count != 0 {
+                let managedObject = grabbedEvent[0]
+                managedObject.setValue("declined", forKey: "acceptedStatus")
+                do {
+                    try managedContext.save()
+                } catch {
+                    print("could not save managed context")
+                }
+            }
+        } catch {
+            print("event could not be modified")
+        }
     }
     
 }
