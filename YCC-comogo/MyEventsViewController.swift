@@ -52,7 +52,7 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
             return
         }
         
-        let attendingStatus = "undecided"
+        let attendingStatus = "accepted"
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "acceptedStatus == %@", attendingStatus) //Queries our core data for only events that the user has accepted.

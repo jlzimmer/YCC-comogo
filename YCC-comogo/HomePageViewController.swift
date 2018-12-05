@@ -24,6 +24,9 @@ class HomePageViewController: BaseViewController{
     }
     
     var myEvents = [Event]()
+    
+    //this is the array that should be fulled from for extracting the event information
+    var eventsToDisplay = [Event]()
 
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var myEventsBtn: UIButton!
@@ -35,6 +38,8 @@ class HomePageViewController: BaseViewController{
         fetchStoredEvents()
 
         getFromAPI()
+        
+        populateDisplayableEvents()
         
         addSlideMenuButton()
        
@@ -56,20 +61,28 @@ class HomePageViewController: BaseViewController{
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
-        fetchStoredEvents()
-        getFromAPI()
+        fetchStoredEvents() //provides a reference to all of our locally stored eventss
+        getFromAPI() //updates local storage with new events.
+        populateDisplayableEvents()
+        
     }
    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func populateDisplayableEvents(){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let attendingStatus = "undecided"
+        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "acceptedStatus == %@", attendingStatus)
+        do {
+            eventsToDisplay = try managedContext.fetch(fetchRequest)
+            
+        } catch {
+            print("Error: Fetch could not be performed")
+            return
+        }
     }
-    */
     
     //function to save an event in core data
     func saveEvent(newEvent: YccEvent){
