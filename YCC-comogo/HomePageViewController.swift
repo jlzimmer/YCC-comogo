@@ -27,12 +27,20 @@ class HomePageViewController: BaseViewController{
     
     //this is the array that should be fulled from for extracting the event information
     var eventsToDisplay = [Event]()
+    
+    var currentIndex = 0
 
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var myEventsBtn: UIButton!
     
+    @IBOutlet weak var locationLabel: UILabel!
     let jsonDecoder = JSONDecoder()
     
+    @IBOutlet weak var eventDate: UILabel!
+    let dateFormatter = DateFormatter()
+    
+    @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var descriptionTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchStoredEvents()
@@ -58,7 +66,11 @@ class HomePageViewController: BaseViewController{
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: color2]
         nav?.tintColor = color1
         nav?.barTintColor = lightGrey
-        // Do any additional setup after loading the view.
+
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .long
+        //function to display Actual event information
+        showEvents()
     }
     override func viewDidAppear(_ animated: Bool) {
         fetchStoredEvents() //provides a reference to all of our locally stored eventss
@@ -66,7 +78,35 @@ class HomePageViewController: BaseViewController{
         populateDisplayableEvents()
         
     }
+    
+    func showEvents(){
+        if (eventsToDisplay.count == 0){
+            eventTitle.text = "You have no more events to view!"
+            
+        } else {
+            eventTitle.text = eventsToDisplay[0].title
+            let startDateString = dateFormatter.string(from: eventsToDisplay[0].eventStartDate!)
+            print(startDateString)
+            eventDate.text = startDateString
+            locationLabel.text = eventsToDisplay[0].location
+            descriptionTextView.text = eventsToDisplay[0].eventDescription
+            eventImage.image = UIImage(named: "e2") // need to set this dynamically, but it is what it is.
+        }
+    }
    
+    @IBAction func likeEvent(_ sender: UIButton) {
+        acceptEvent(index: 0) //modify the events status in core data
+        populateDisplayableEvents() // update what our displayable events table contains
+        print(eventsToDisplay.count)
+        showEvents() //update the current event shown.
+    }
+    
+    @IBAction func dislikeEvent(_ sender: UIButton) {
+        declineEvent(index: 0)
+        populateDisplayableEvents()
+        print(eventsToDisplay.count)
+        showEvents()
+    }
     func populateDisplayableEvents(){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -128,7 +168,7 @@ class HomePageViewController: BaseViewController{
     
     //Edit event data so that it is favorited.
     func acceptEvent(index: Int){
-        let eventToBeModified = myEvents[index]
+        let eventToBeModified = eventsToDisplay[index]
         let ident = eventToBeModified.id!
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -156,7 +196,7 @@ class HomePageViewController: BaseViewController{
     
     //Edit event data so that it is declined
     func declineEvent(index: Int){
-        let eventToBeModified = myEvents[index]
+        let eventToBeModified = eventsToDisplay[index]
         let ident = eventToBeModified.id!
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return

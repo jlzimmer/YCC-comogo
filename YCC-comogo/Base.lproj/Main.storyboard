@@ -469,6 +469,9 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dislikeEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kFo-r0-8sP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfD-bY-v1C">
                                 <rect key="frame" x="214" y="708" width="180" height="62"/>
@@ -481,6 +484,9 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="likeEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UN0-Ta-6xV"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RBHS" translatesAutoresizingMaskIntoConstraints="NO" id="jZM-nM-wRn">
                                 <rect key="frame" x="0.0" y="140" width="414" height="180"/>
@@ -573,7 +579,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="ComoGo" leftItemsSupplementBackButton="YES" id="xtm-dc-1jf"/>
                     <connections>
+                        <outlet property="descriptionTextView" destination="3oR-kS-F5x" id="isP-tX-0ia"/>
+                        <outlet property="eventDate" destination="0W8-Ce-7bq" id="7hS-vm-9da"/>
+                        <outlet property="eventImage" destination="jZM-nM-wRn" id="3fP-No-qrv"/>
                         <outlet property="eventTitle" destination="YCm-rP-30g" id="IC2-US-hoZ"/>
+                        <outlet property="locationLabel" destination="DYU-XQ-qgE" id="DWl-8W-hke"/>
                         <outlet property="myEventsBtn" destination="r6a-e8-FaT" id="uY2-HC-uBO"/>
                     </connections>
                 </viewController>
