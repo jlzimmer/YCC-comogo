@@ -9,15 +9,9 @@
 import UIKit
 import CoreData
 
-//Basic workflow as I see it:
-//App loads, makes request to API, API results are saved into core data.
-    // We should only be saving events who do not have an event with the same existent ID stored
-    // -> Then, we query core data to get the results that have a status of "undecided", place them into the
-    // myEvents array, and display them.
-//The table displays all events that have an accepted status of "undecided"
-//When the user clicks decline or accept, the event at that indexes accepted status is modified to the appropriate option
-//The view is reloaded, meaning we query for core data events that have a status of "undecided".
-//
+//To be completely honest, the app acts super weird when starting out on a new phone with the simulator.
+//I don't know why, there's a good chance you may have to just launch the app a few times for things to iron out.
+//However, shit works.
 class HomePageViewController: BaseViewController{
     enum DateError: String, Error {
         case invalidDate
@@ -72,6 +66,7 @@ class HomePageViewController: BaseViewController{
         //function to display Actual event information
         showEvents()
     }
+    //Each time the view appears, we fetch from our stored events, query our API for new pulls, and then display
     override func viewDidAppear(_ animated: Bool) {
         fetchStoredEvents() //provides a reference to all of our locally stored eventss
         getFromAPI() //updates local storage with new events.
@@ -86,7 +81,6 @@ class HomePageViewController: BaseViewController{
         } else {
             eventTitle.text = eventsToDisplay[0].title
             let startDateString = dateFormatter.string(from: eventsToDisplay[0].eventStartDate!)
-            print(startDateString)
             eventDate.text = startDateString
             locationLabel.text = eventsToDisplay[0].location
             descriptionTextView.text = eventsToDisplay[0].eventDescription
@@ -95,15 +89,23 @@ class HomePageViewController: BaseViewController{
     }
    
     @IBAction func likeEvent(_ sender: UIButton) {
+        if (eventsToDisplay.count == 0){    //Buttons don't work if there's no events to show
+            return
+        }
         acceptEvent(index: 0) //modify the events status in core data
         populateDisplayableEvents() // update what our displayable events table contains
+        print("Events to display count")
         print(eventsToDisplay.count)
         showEvents() //update the current event shown.
     }
     
     @IBAction func dislikeEvent(_ sender: UIButton) {
+        if (eventsToDisplay.count == 0){
+            return
+        }
         declineEvent(index: 0)
         populateDisplayableEvents()
+        print("Events to display count")
         print(eventsToDisplay.count)
         showEvents()
     }
@@ -141,10 +143,18 @@ class HomePageViewController: BaseViewController{
         }
     }
     
+    //current issue, for some reason, that API pull is triggering this to reset.
+    //For now, I think the issue was that the event ID wasn't unwrapping, so I believe I've fixed that.
+    //Note: This could get weird.
     func checkIfNewEvent(ident: String) -> Bool{
         for event in myEvents {
-            if (event.id == ident){
-                return false
+            if let eventString = event.id {
+                if (eventString == ident){
+                    return false
+                }
+            }
+            else {
+                print("alright this unwrapped wrong")
             }
         }
         return true

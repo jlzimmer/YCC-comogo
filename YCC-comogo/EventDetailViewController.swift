@@ -18,6 +18,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var picture: UIImageView!
+    var actualEvent: Event?
     
     
     override func viewDidLoad() {
@@ -28,13 +29,13 @@ class EventDetailViewController: UIViewController {
 
         eventTitle.textColor = color1
         
-        picture.image=UIImage(named: (dummyEvents?.pictureString)!)
-        eventTitle.text = dummyEvents?.title
-        let concatStartTime = (dummyEvents?.startTime)! + "  -"
-        time.text = concatStartTime
-        location.text = dummyEvents?.location
+        picture.image=UIImage(named: "e2")
+        eventTitle.text = actualEvent?.title
+//        let concatStartTime = (dummyEvents?.startTime)! + "  -"
+        time.text = "ahh"
+        location.text = actualEvent?.location
         eventDes.text = "JKFHKSJNDASKdmlkamsdlkasmdlkamdlkewmdkladmla"
-        endTime.text = dummyEvents?.endTime
+        endTime.text = "AHHH"
         date.text = "November 28th 2018"
         // Do any additional setup after loading the view.
         

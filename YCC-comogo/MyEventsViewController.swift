@@ -16,15 +16,21 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var eventsTableView: UITableView!
     var dummyEvents: [DummyEvent]=[]
-    var filteredEvents = [DummyEvent]()
+    var filteredEvents = [Event]()
     var searching = false
     
     var myEvents = [Event]() //Array of Event which matches our core data entity.
   
+    let dateFormatter = DateFormatter()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .long
+
+        populateEvents()
+
         dummyEvents.append(DummyEvent(title: "Football Game", startTime: "7:00pm", endTime:"10:00pm", location: "Hickman HS", pictureString: "e1"))
         dummyEvents.append(DummyEvent(title: "Art Class", startTime: "4:00pm", endTime:"5:00pm", location: "Rockbridge HS", pictureString: "e2"))
         dummyEvents.append(DummyEvent(title: "Volunteer Event", startTime: "2:00pm", endTime:"4:00pm", location: "Downtown Columbia", pictureString: "e3"))
@@ -37,8 +43,10 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
         self.eventsTableView.isHidden = true
         self.animateTable()
 
+        
 
         self.searchBar.delegate = self
+        eventsTableView.reloadData()
         
         // Do any additional setup after loading the view.
     }
@@ -58,14 +66,7 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
         fetchRequest.predicate = NSPredicate(format: "acceptedStatus == %@", attendingStatus) //Queries our core data for only events that the user has accepted.
         do {
             myEvents = try managedContext.fetch(fetchRequest)
-            
             eventsTableView.reloadData() //After fetching the events, it will reload the data.
-            //To do From a UI standpoint:
-            //Set the data cells to be fetched from core data.
-            
-            //This is successful, so, saving events to an accepted event works in theory.
-            print(myEvents.count)
-            //To do from a testing standpoint: Have some stored data source of accepted events, then do some other bulllllshit.
         } catch {
             print("Error: Fetch could not be performed")
         }
@@ -82,30 +83,30 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
             return filteredEvents.count
         }
         else{
-            return dummyEvents.count
+            return myEvents.count
         }
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = eventsTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let cellEvent: DummyEvent
+        let cellEvent: Event
         if let cell = cell as? EventTableViewCell {
             if searching {
                 cellEvent = filteredEvents[indexPath.row]
             }
             else{
-                cellEvent = dummyEvents[indexPath.row]
+                cellEvent = myEvents[indexPath.row]
             }
           //  let color1 = UIColor(rgb: 0x00688F)
             let color2 = UIColor(rgb: 0xFFDD00)
             let color3 = UIColor(rgb: 0x3286a5)
             cell.title.text = cellEvent.title
             cell.title.textColor = color2
-            cell.time.text = cellEvent.startTime
+            cell.time.text = ""
             cell.location.text = cellEvent.location
-            cell.picture.image = UIImage(named: cellEvent.pictureString)
-            cell.eventDate.text = "November 10, 2018  @"
+            cell.picture.image = UIImage(named: "e1")
+            cell.eventDate.text = dateFormatter.string(from: cellEvent.eventStartDate!)
             cell.bgColor.backgroundColor = color3
             
             cell.layer.cornerRadius = 12
@@ -120,7 +121,7 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EventDetailViewController,
             let row = eventsTableView.indexPathForSelectedRow?.row {
-            destination.dummyEvents = dummyEvents[row]
+            destination.actualEvent = myEvents[row]
         }
     }
     func animateTable(){
@@ -146,10 +147,10 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
 // search function
 extension MyEventsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        var filteredEvents1 = [DummyEvent]() //results for search by title search
-        var filteredEvents2 = [DummyEvent]() // results for search by location search 
-        filteredEvents1 = dummyEvents.filter({$0.title.prefix(searchText.count)==searchText})
-        filteredEvents2 = dummyEvents.filter({$0.location.prefix(searchText.count)==searchText})
+        var filteredEvents1 = [Event]() //results for search by title search
+        var filteredEvents2 = [Event]() // results for search by location search
+        filteredEvents1 = myEvents.filter({$0.title!.prefix(searchText.count)==searchText})
+        filteredEvents2 = myEvents.filter({$0.location!.prefix(searchText.count)==searchText})
 
         filteredEvents = filteredEvents1 + filteredEvents2
         searching = true
