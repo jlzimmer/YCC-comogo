@@ -19,14 +19,22 @@ import CoreData
 //The view is reloaded, meaning we query for core data events that have a status of "undecided".
 //
 class HomePageViewController: BaseViewController{
+    enum DateError: String, Error {
+        case invalidDate
+    }
     
     var myEvents = [Event]()
 
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var myEventsBtn: UIButton!
     
+    let jsonDecoder = JSONDecoder()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchStoredEvents()
+
+        getFromAPI()
         
         addSlideMenuButton()
        
@@ -47,6 +55,10 @@ class HomePageViewController: BaseViewController{
         nav?.barTintColor = lightGrey
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        fetchStoredEvents()
+        getFromAPI()
+    }
    
 
     /*
@@ -59,33 +71,45 @@ class HomePageViewController: BaseViewController{
     }
     */
     
-    //IMPORTANT: Remember to sever this outlet as code testing continues
-    
-    //The purpose of the function below is to provide a mechanism to save an event in core data storage.
-    //This is an accepted event which should show up when we print from our "MyEventsViewController".
-//    @IBAction func demoSaveAcceptedEvent(_ sender: UIButton) {
-//
-//        let newEvent = YccEvent(title: "test", description: "test desc", start: Date(timeIntervalSinceNow: 0), end: Date(timeIntervalSinceNow: 0), category: "test category", posted: Date(timeIntervalSinceNow: 0), location: "test location", id: "test id")
-//
-//        if let event = Event(title: newEvent.title, eventDescription: newEvent.description, eventStartDate: newEvent.start, eventEndDate: newEvent.end, category: newEvent.category, location: newEvent.location, postedDate: newEvent.posted, acceptedStatus: "accepted", id: newEvent.id) {
-//            do {
-//                let managedContext = event.managedObjectContext
-//                try managedContext?.save()
-//                print("Saved?")
-//            } catch {
-//                print("Error saving context")
-//            }
-//        }
-//    }
     //function to save an event in core data
     func saveEvent(newEvent: YccEvent){
-        if let event = Event(title: newEvent.title, eventDescription: newEvent.description, eventStartDate: newEvent.start, eventEndDate: newEvent.end, category: newEvent.category, location: newEvent.location, postedDate: newEvent.posted, acceptedStatus: "undecided", id: newEvent.id) {
-            do {
-                let managedContext = event.managedObjectContext
-                try managedContext?.save()
-            } catch {
-                print("Error saving context")
+        if (checkIfNewEvent(ident: newEvent.id) == false){
+            return
+        }
+        else {
+            if let event = Event(title: newEvent.title, eventDescription: newEvent.description, eventStartDate: newEvent.start, eventEndDate: newEvent.end, category: newEvent.category, location: newEvent.location, postedDate: newEvent.posted, acceptedStatus: "undecided", id: newEvent.id) {
+                do {
+                    let managedContext = event.managedObjectContext
+                    try managedContext?.save()
+                } catch {
+                    print("Error saving context")
+                }
             }
+        }
+    }
+    
+    func checkIfNewEvent(ident: String) -> Bool{
+        for event in myEvents {
+            if (event.id == ident){
+                return false
+            }
+        }
+        return true
+    }
+    
+    func fetchStoredEvents(){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        do {
+            myEvents = try managedContext.fetch(fetchRequest)
+            print(myEvents.count)
+            
+        } catch {
+            print("Error: Fetch could not be performed")
+            return
         }
     }
     
@@ -141,6 +165,50 @@ class HomePageViewController: BaseViewController{
         } catch {
             print("event could not be modified")
         }
+    }
+    
+    func getFromAPI(){
+        let jsonUrlString = "https://ycc-api.herokuapp.com/api/event/"
+        guard let url = URL(string: jsonUrlString) else {return}
+        var request = URLRequest(url: url)
+        request.addValue("JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdHRlbmRpbmdFdmVudHMiOltdLCJob3N0aW5nRXZlbnRzIjpbXSwiX2lkIjoiNWMwNmM2MGJmNmU1ZWYwMDE2ODk1OTc4IiwiZW1haWwiOiJuYXRoYW4ub3J0YmFsc0BnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJOYXRoYW4iLCJsYXN0TmFtZSI6Ik9ydGJhbHMiLCJwYXNzd29yZCI6IiQyYiQxMCRCY2YvVjNDR1gucnJLN0ZKd2doaENlRDlJb0tJV3hPQmJaSzJGUVNxeGxsYnJSeGkxa0MwTyIsInBob25lTnVtYmVyIjoiMzMzNDU2MTIzNCIsInJvbGUiOiI1YzA2YzdjNmY2ZTVlZjAwMTY4OTU5N2EiLCJ2YWxpZGF0aW9uS2V5IjoiNWMwNmM2MGJmNmU1ZWYwMDE2ODk1OTc5IiwiX192IjowLCJpYXQiOjE1NDM5NDkyMDl9.arf9m2SkJAhOjdHh8Tq3lqLRDfDgEYoE4frWiPvlh_w",forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request){(data,response,err) in
+            guard err == nil else{
+                print("error gettinge events")
+                return
+            }
+            guard let data = data else {return}
+            do {
+                let decoder = JSONDecoder()
+                
+                decoder.dateDecodingStrategy =   .custom({ (decoder) -> Date in
+                    let container = try decoder.singleValueContainer()
+                    let dateStr = try container.decode(String.self)
+                    
+                    let formatter = DateFormatter()
+                    formatter.calendar = Calendar(identifier: .iso8601)
+                    formatter.locale = Locale(identifier: "en_US_POSIX")
+                    formatter.timeZone = TimeZone(secondsFromGMT: 0)
+                    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+                    if let date = formatter.date(from: dateStr) {
+                        return date
+                    }
+                    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXXXX"
+                    if let date = formatter.date(from: dateStr) {
+                        return date
+                    }
+                    throw DateError.invalidDate
+                })
+                let events = try decoder.decode([YccEvent].self, from: data)
+                for event in events{
+                    self.saveEvent(newEvent: event)
+                }
+            } catch {
+                print("hmm: \(error)")
+            }
+            
+            }.resume()
     }
     
 }
