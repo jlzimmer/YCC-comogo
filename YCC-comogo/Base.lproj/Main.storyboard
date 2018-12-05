@@ -442,10 +442,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" text="" placeholder="Search Events..." translatesAutoresizingMaskIntoConstraints="NO" id="lWF-qN-b9O">
-                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6a-e8-FaT">
                                 <rect key="frame" x="20" y="785" width="374" height="62"/>
                                 <color key="backgroundColor" red="0.63995951669999995" green="0.73644450770000003" blue="0.78648656610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -487,13 +483,13 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RBHS" translatesAutoresizingMaskIntoConstraints="NO" id="jZM-nM-wRn">
-                                <rect key="frame" x="0.0" y="196" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Hwn-Zp-Qbc"/>
+                                    <constraint firstAttribute="height" constant="180" id="Hwn-Zp-Qbc"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26j-GP-S1X">
-                                <rect key="frame" x="0.0" y="354" width="414" height="346"/>
+                                <rect key="frame" x="0.0" y="328" width="414" height="372"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday November 28th, 2018: 7:00pm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-Ce-7bq">
                                         <rect key="frame" x="59" y="31" width="292" height="21"/>
@@ -557,12 +553,10 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jZM-nM-wRn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="013-jq-dWe"/>
-                            <constraint firstItem="lWF-qN-b9O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9uW-3A-TYO"/>
                             <constraint firstItem="26j-GP-S1X" firstAttribute="top" secondItem="jZM-nM-wRn" secondAttribute="bottom" constant="8" symbolic="YES" id="Bc5-bc-n9p"/>
-                            <constraint firstItem="lWF-qN-b9O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I1F-8l-Etf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r6a-e8-FaT" secondAttribute="bottom" constant="15" id="Me0-w5-QBJ"/>
                             <constraint firstItem="26j-GP-S1X" firstAttribute="trailing" secondItem="jZM-nM-wRn" secondAttribute="trailing" id="NQl-EW-yxI"/>
-                            <constraint firstItem="jZM-nM-wRn" firstAttribute="top" secondItem="lWF-qN-b9O" secondAttribute="bottom" id="WPy-Bd-6Ky"/>
+                            <constraint firstItem="jZM-nM-wRn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Skx-ey-fqa"/>
                             <constraint firstItem="26j-GP-S1X" firstAttribute="leading" secondItem="jZM-nM-wRn" secondAttribute="leading" id="XK2-KF-Qj5"/>
                             <constraint firstItem="w5w-hD-G8Z" firstAttribute="top" secondItem="26j-GP-S1X" secondAttribute="bottom" constant="8" symbolic="YES" id="bZd-xr-PVs"/>
                             <constraint firstItem="r6a-e8-FaT" firstAttribute="top" secondItem="rfD-bY-v1C" secondAttribute="bottom" constant="15" id="grN-BA-bzZ"/>
@@ -571,7 +565,6 @@
                             <constraint firstItem="rfD-bY-v1C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="214" id="jh6-m6-D3d"/>
                             <constraint firstItem="r6a-e8-FaT" firstAttribute="top" secondItem="w5w-hD-G8Z" secondAttribute="bottom" constant="15" id="oB6-NA-yvi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w5w-hD-G8Z" secondAttribute="trailing" constant="214" id="obY-Rm-Jki"/>
-                            <constraint firstItem="lWF-qN-b9O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="poH-rV-OTn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfD-bY-v1C" secondAttribute="trailing" constant="20" id="qFT-79-Lup"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZM-nM-wRn" secondAttribute="trailing" id="qNf-vB-TB3"/>
                             <constraint firstItem="w5w-hD-G8Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zd7-8K-yta"/>
