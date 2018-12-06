@@ -24,7 +24,7 @@ class HomePageViewController: BaseViewController{
         let color1 = UIColor(rgb: 0x00688F)
         let color3 = UIColor(rgb: 0x99c2d2)
         
-        eventTitle.textColor = color1
+//        eventTitle.textColor = color1
         myEventsBtn.backgroundColor = color3
         myEventsBtn.setTitleColor(color1, for: .normal)
         

@@ -488,92 +488,71 @@
                                     <constraint firstAttribute="height" constant="180" id="Hwn-Zp-Qbc"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26j-GP-S1X">
-                                <rect key="frame" x="0.0" y="328" width="414" height="372"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday November 28th, 2018: 7:00pm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-Ce-7bq">
-                                        <rect key="frame" x="59" y="31" width="292" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="gz2-sq-i21"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCm-rP-30g">
-                                        <rect key="frame" x="14" y="5" width="389" height="26"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Charity Concert at Rock Bridge High School">
-                                                <attributes>
-                                                    <font key="NSFont" size="19" name="Avenir-Heavy"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 Providence Ave. Columbia, MO 65202" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYU-XQ-qgE">
-                                        <rect key="frame" x="8" y="52" width="394" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="TGu-55-p6r"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3oR-kS-F5x">
-                                        <rect key="frame" x="0.0" y="81" width="414" height="700"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="700" id="mhT-6I-RdR"/>
-                                        </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="DYU-XQ-qgE" secondAttribute="trailing" constant="12" id="6h3-cD-e5p"/>
-                                    <constraint firstItem="3oR-kS-F5x" firstAttribute="top" secondItem="DYU-XQ-qgE" secondAttribute="bottom" constant="8" symbolic="YES" id="99t-3Q-A0q"/>
-                                    <constraint firstAttribute="trailing" secondItem="3oR-kS-F5x" secondAttribute="trailing" id="IHe-kn-iBY"/>
-                                    <constraint firstAttribute="bottom" secondItem="DYU-XQ-qgE" secondAttribute="bottom" constant="171" id="JVZ-fl-oEj"/>
-                                    <constraint firstItem="3oR-kS-F5x" firstAttribute="leading" secondItem="26j-GP-S1X" secondAttribute="leading" id="N65-dA-V8e"/>
-                                    <constraint firstItem="0W8-Ce-7bq" firstAttribute="leading" secondItem="26j-GP-S1X" secondAttribute="leading" constant="59" id="P34-RK-U3u"/>
-                                    <constraint firstItem="YCm-rP-30g" firstAttribute="leading" secondItem="26j-GP-S1X" secondAttribute="leading" constant="14" id="Prc-nx-AOH"/>
-                                    <constraint firstItem="DYU-XQ-qgE" firstAttribute="leading" secondItem="26j-GP-S1X" secondAttribute="leadingMargin" id="VJC-NA-bDe"/>
-                                    <constraint firstItem="0W8-Ce-7bq" firstAttribute="top" secondItem="YCm-rP-30g" secondAttribute="bottom" id="Vta-ux-OPh"/>
-                                    <constraint firstItem="DYU-XQ-qgE" firstAttribute="top" secondItem="0W8-Ce-7bq" secondAttribute="bottom" id="XmC-ya-Prp"/>
-                                    <constraint firstAttribute="trailing" secondItem="YCm-rP-30g" secondAttribute="trailing" constant="11" id="mZv-Wz-Gty"/>
-                                    <constraint firstItem="YCm-rP-30g" firstAttribute="top" secondItem="26j-GP-S1X" secondAttribute="top" constant="5" id="uPz-KH-uNv"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0W8-Ce-7bq" secondAttribute="trailing" constant="59" id="zXy-YF-3ct"/>
-                                </constraints>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday November 28th, 2018: 7:00pm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcX-Z0-UBN">
+                                <rect key="frame" x="0.0" y="351" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvl-Fz-3Hh">
+                                <rect key="frame" x="0.0" y="325" width="414" height="26"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Charity Concert at Rock Bridge High School">
+                                        <attributes>
+                                            <font key="NSFont" size="19" name="Avenir-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 Providence Ave. Columbia, MO 65202" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwd-3C-t3F">
+                                <rect key="frame" x="0.0" y="371.5" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-PE-Nr6">
+                                <rect key="frame" x="0.0" y="397" width="414" height="306"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.77670389409999996" green="0.77609926460000001" blue="0.79607713219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jZM-nM-wRn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="013-jq-dWe"/>
-                            <constraint firstItem="26j-GP-S1X" firstAttribute="top" secondItem="jZM-nM-wRn" secondAttribute="bottom" constant="8" symbolic="YES" id="Bc5-bc-n9p"/>
+                            <constraint firstItem="GhG-PE-Nr6" firstAttribute="top" secondItem="Bwd-3C-t3F" secondAttribute="bottom" constant="5" id="1q2-BA-f6D"/>
+                            <constraint firstItem="bvl-Fz-3Hh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BcU-aq-6qS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bwd-3C-t3F" secondAttribute="trailing" id="BtZ-kN-dB9"/>
+                            <constraint firstItem="kcX-Z0-UBN" firstAttribute="top" secondItem="bvl-Fz-3Hh" secondAttribute="bottom" id="KkN-1F-qj3"/>
+                            <constraint firstItem="Bwd-3C-t3F" firstAttribute="top" secondItem="kcX-Z0-UBN" secondAttribute="bottom" id="MJf-yo-hoB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r6a-e8-FaT" secondAttribute="bottom" constant="15" id="Me0-w5-QBJ"/>
-                            <constraint firstItem="26j-GP-S1X" firstAttribute="trailing" secondItem="jZM-nM-wRn" secondAttribute="trailing" id="NQl-EW-yxI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kcX-Z0-UBN" secondAttribute="trailing" id="QRM-Bc-qEb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bvl-Fz-3Hh" secondAttribute="trailing" id="Qt7-gZ-Ei3"/>
+                            <constraint firstItem="Bwd-3C-t3F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rk7-jp-t47"/>
                             <constraint firstItem="jZM-nM-wRn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Skx-ey-fqa"/>
-                            <constraint firstItem="26j-GP-S1X" firstAttribute="leading" secondItem="jZM-nM-wRn" secondAttribute="leading" id="XK2-KF-Qj5"/>
-                            <constraint firstItem="w5w-hD-G8Z" firstAttribute="top" secondItem="26j-GP-S1X" secondAttribute="bottom" constant="8" symbolic="YES" id="bZd-xr-PVs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GhG-PE-Nr6" secondAttribute="trailing" id="VHT-c5-3xY"/>
+                            <constraint firstItem="w5w-hD-G8Z" firstAttribute="top" secondItem="GhG-PE-Nr6" secondAttribute="bottom" constant="5" id="Y31-vx-AH8"/>
                             <constraint firstItem="r6a-e8-FaT" firstAttribute="top" secondItem="rfD-bY-v1C" secondAttribute="bottom" constant="15" id="grN-BA-bzZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r6a-e8-FaT" secondAttribute="trailing" constant="20" id="h5t-Rd-x5I"/>
                             <constraint firstItem="r6a-e8-FaT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j1F-Yc-4Gg"/>
                             <constraint firstItem="rfD-bY-v1C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="214" id="jh6-m6-D3d"/>
+                            <constraint firstItem="kcX-Z0-UBN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="noQ-Le-Kj9"/>
                             <constraint firstItem="r6a-e8-FaT" firstAttribute="top" secondItem="w5w-hD-G8Z" secondAttribute="bottom" constant="15" id="oB6-NA-yvi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w5w-hD-G8Z" secondAttribute="trailing" constant="214" id="obY-Rm-Jki"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfD-bY-v1C" secondAttribute="trailing" constant="20" id="qFT-79-Lup"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZM-nM-wRn" secondAttribute="trailing" id="qNf-vB-TB3"/>
+                            <constraint firstItem="bvl-Fz-3Hh" firstAttribute="top" secondItem="jZM-nM-wRn" secondAttribute="bottom" constant="5" id="sOw-LK-XfG"/>
+                            <constraint firstItem="GhG-PE-Nr6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yYi-va-fJT"/>
                             <constraint firstItem="w5w-hD-G8Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zd7-8K-yta"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="ComoGo" leftItemsSupplementBackButton="YES" id="xtm-dc-1jf"/>
                     <connections>
-                        <outlet property="eventTitle" destination="YCm-rP-30g" id="IC2-US-hoZ"/>
                         <outlet property="myEventsBtn" destination="r6a-e8-FaT" id="uY2-HC-uBO"/>
                     </connections>
                 </viewController>
@@ -1000,11 +979,11 @@
     <resources>
         <image name="RBHS" width="300" height="168"/>
         <image name="close-circle" width="62" height="62"/>
-        <image name="comogo" width="624" height="364"/>
+        <image name="comogo" width="312" height="182"/>
         <image name="e1" width="1170" height="878"/>
-        <image name="email" width="512" height="512"/>
+        <image name="email" width="256" height="256"/>
         <image name="heart (2)" width="62" height="62"/>
-        <image name="password" width="512" height="512"/>
+        <image name="password" width="491.51998901367188" height="491.51998901367188"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="D0k-Ik-AoS"/>
