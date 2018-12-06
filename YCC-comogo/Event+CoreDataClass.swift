@@ -38,7 +38,7 @@ public class Event: NSManagedObject {
     }
     
     convenience init?(title:String,eventDescription:String,eventStartDate:Date,eventEndDate:Date,category:String,location:String,postedDate:Date,acceptedStatus:String,id:String) {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate //on startup from a new phone, this can throw an error. but its super inconsistent.
         guard let managedContext = appDelegate?.persistentContainer.viewContext else{
             return nil
         }

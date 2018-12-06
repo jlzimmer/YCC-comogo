@@ -896,7 +896,7 @@
                         <viewLayoutGuide key="safeArea" id="1BV-Qx-ysE"/>
                     </view>
                     <connections>
-                        <outlet property="eventTableView" destination="h0r-RA-yQ7" id="V3D-UM-cr3"/>
+                        <outlet property="eventTableView" destination="h0r-RA-yQ7" id="Bvu-sZ-Ypf"/>
                         <outlet property="searchBar" destination="sez-PG-v7w" id="AuZ-DM-9u3"/>
                     </connections>
                 </viewController>
@@ -965,6 +965,9 @@
                                 <state key="normal" title="Add to My Events ">
                                     <color key="titleColor" red="0.16548516329999999" green="0.38364334560000002" blue="0.93779743019999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addEvent:" destination="WTn-KC-T9W" eventType="touchUpInside" id="2ds-TQ-C1m"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

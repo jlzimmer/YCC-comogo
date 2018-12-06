@@ -7,23 +7,23 @@
 //
 
 import UIKit
+import CoreData
 
 class DeclinedEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var dummyEvents: [DummyEvent]=[]
-    var filteredEvents = [DummyEvent]()
-    var searching = false
-    
     @IBOutlet weak var eventTableView: UITableView!
+    var filteredEvents = [Event]()
+    var searching = false
+    var myEvents = [Event]() //Array of Event which matches our core data entity.
+    
+    let dateFormatter = DateFormatter()
     
     @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dummyEvents.append(DummyEvent(title: "Guest Speaker", startTime: "7:00pm", endTime:"10:00pm", location: "Hickman HS", pictureString: "e2"))
-        dummyEvents.append(DummyEvent(title: "Pep Rally" , startTime: "4:00pm", endTime:"5:00pm", location: "Rockbridge HS", pictureString: "e1"))
-        dummyEvents.append(DummyEvent(title: "Parade", startTime: "2:00pm", endTime:"4:00pm", location: "Downtown Columbia", pictureString: "e4"))
-      
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .long
+        populateEvents()
         navigationItem.largeTitleDisplayMode = .never
         
         self.title = "Declined Events"
@@ -33,7 +33,27 @@ class DeclinedEventsViewController: UIViewController, UITableViewDelegate, UITab
         
         self.searchBar.delegate = self
         
-        // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        populateEvents()
+        self.eventTableView.reloadData()
+    }
+    
+    func populateEvents(){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let attendingStatus = "declined"
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "acceptedStatus == %@", attendingStatus) //Queries our core data for only events that the user has declined.
+        do {
+            myEvents = try managedContext.fetch(fetchRequest)
+            eventTableView.reloadData() //After fetching the events, it will reload the data.
+        } catch {
+            print("Error: Fetch could not be performed")
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,31 +66,31 @@ class DeclinedEventsViewController: UIViewController, UITableViewDelegate, UITab
             return filteredEvents.count
         }
         else{
-            return dummyEvents.count
+            return myEvents.count
         }
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = eventTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let cellEvent: DummyEvent
+        let cellEvent: Event
         if let cell = cell as? EventTableViewCell {
             if searching {
                 cellEvent = filteredEvents[indexPath.row]
             }
             else{
-                cellEvent = dummyEvents[indexPath.row]
+                cellEvent = myEvents[indexPath.row]
             }
-           
+            
             
             let color2 = UIColor(rgb: 0xFFDD00)
             let color3 = UIColor(rgb: 0x3286a5)
             cell.title.text = cellEvent.title
             cell.title.textColor = color2
-            cell.time.text = cellEvent.startTime
+            cell.time.text = ""
             cell.location.text = cellEvent.location
-            cell.picture.image = UIImage(named: cellEvent.pictureString)
-            cell.eventDate.text = "November 10, 2018  @"
+            cell.picture.image = UIImage(named: "e2")
+            cell.eventDate.text = dateFormatter.string(from: cellEvent.eventStartDate!)
             cell.bgColor2.backgroundColor = color3
             
             
@@ -86,7 +106,7 @@ class DeclinedEventsViewController: UIViewController, UITableViewDelegate, UITab
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DeclinedEventDetailViewController,
             let row = eventTableView.indexPathForSelectedRow?.row {
-            destination.dummyEvents = dummyEvents[row]
+            destination.dummyEvents = myEvents[row]
         }
     }
     func animateTable(){
@@ -112,10 +132,10 @@ class DeclinedEventsViewController: UIViewController, UITableViewDelegate, UITab
 // search function
 extension DeclinedEventsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        var filteredEvents1 = [DummyEvent]() //results for search by title search
-        var filteredEvents2 = [DummyEvent]() // results for search by location search
-        filteredEvents1 = dummyEvents.filter({$0.title.prefix(searchText.count)==searchText})
-        filteredEvents2 = dummyEvents.filter({$0.location.prefix(searchText.count)==searchText})
+        var filteredEvents1 = [Event]() //results for search by title search
+        var filteredEvents2 = [Event]() // results for search by location search
+        filteredEvents1 = myEvents.filter({$0.title!.prefix(searchText.count)==searchText})
+        filteredEvents2 = myEvents.filter({$0.location!.prefix(searchText.count)==searchText})
         
         filteredEvents = filteredEvents1 + filteredEvents2
         searching = true

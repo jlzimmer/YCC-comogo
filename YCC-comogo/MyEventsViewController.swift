@@ -30,12 +30,6 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
         dateFormatter.dateStyle = .long
 
         populateEvents()
-
-        dummyEvents.append(DummyEvent(title: "Football Game", startTime: "7:00pm", endTime:"10:00pm", location: "Hickman HS", pictureString: "e1"))
-        dummyEvents.append(DummyEvent(title: "Art Class", startTime: "4:00pm", endTime:"5:00pm", location: "Rockbridge HS", pictureString: "e2"))
-        dummyEvents.append(DummyEvent(title: "Volunteer Event", startTime: "2:00pm", endTime:"4:00pm", location: "Downtown Columbia", pictureString: "e3"))
-        dummyEvents.append(DummyEvent(title: "College Prep Corse", startTime: "6:00pm", endTime:"7:30pm", location: "Hickman HS", pictureString: "e4"))
-       dummyEvents.append(DummyEvent(title: "Basketball Game", startTime: "6:30pm", endTime:"9:00pm", location: "Rockbridge HS", pictureString: "e5"))
         
         navigationItem.largeTitleDisplayMode = .never
         self.title = "My Events"
@@ -98,6 +92,9 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
             else{
                 cellEvent = myEvents[indexPath.row]
             }
+            let calendar = Calendar.current
+            let startTime = calendar.component(.hour, from: cellEvent.eventStartDate!)
+            let endTime   = calendar.component(.hour, from: cellEvent.eventEndDate!)
           //  let color1 = UIColor(rgb: 0x00688F)
             let color2 = UIColor(rgb: 0xFFDD00)
             let color3 = UIColor(rgb: 0x3286a5)
