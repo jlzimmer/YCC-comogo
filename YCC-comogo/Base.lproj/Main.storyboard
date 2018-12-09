@@ -498,7 +498,7 @@
                                 <rect key="frame" x="0.0" y="328" width="414" height="372"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday November 28th, 2018: 7:00pm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-Ce-7bq">
-                                        <rect key="frame" x="59" y="31" width="292" height="21"/>
+                                        <rect key="frame" x="61" y="31" width="292" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="gz2-sq-i21"/>
                                         </constraints>
@@ -507,7 +507,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCm-rP-30g">
-                                        <rect key="frame" x="14" y="5" width="389" height="26"/>
+                                        <rect key="frame" x="12.5" y="5" width="389" height="26"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Charity Concert at Rock Bridge High School">
                                                 <attributes>
@@ -519,7 +519,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 Providence Ave. Columbia, MO 65202" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYU-XQ-qgE">
-                                        <rect key="frame" x="8" y="52" width="394" height="21"/>
+                                        <rect key="frame" x="58.5" y="52" width="297" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="TGu-55-p6r"/>
                                         </constraints>
@@ -539,19 +539,15 @@
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="DYU-XQ-qgE" secondAttribute="trailing" constant="12" id="6h3-cD-e5p"/>
                                     <constraint firstItem="3oR-kS-F5x" firstAttribute="top" secondItem="DYU-XQ-qgE" secondAttribute="bottom" constant="8" symbolic="YES" id="99t-3Q-A0q"/>
                                     <constraint firstAttribute="bottom" secondItem="DYU-XQ-qgE" secondAttribute="bottom" constant="171" id="JVZ-fl-oEj"/>
                                     <constraint firstItem="3oR-kS-F5x" firstAttribute="leading" secondItem="26j-GP-S1X" secondAttribute="leading" id="N65-dA-V8e"/>
-                                    <constraint firstItem="0W8-Ce-7bq" firstAttribute="leading" secondItem="26j-GP-S1X" secondAttribute="leading" constant="59" id="P34-RK-U3u"/>
-                                    <constraint firstItem="YCm-rP-30g" firstAttribute="leading" secondItem="26j-GP-S1X" secondAttribute="leading" constant="14" id="Prc-nx-AOH"/>
-                                    <constraint firstItem="DYU-XQ-qgE" firstAttribute="leading" secondItem="26j-GP-S1X" secondAttribute="leadingMargin" id="VJC-NA-bDe"/>
+                                    <constraint firstItem="YCm-rP-30g" firstAttribute="centerX" secondItem="26j-GP-S1X" secondAttribute="centerX" id="Pq5-Mw-5Nw"/>
+                                    <constraint firstItem="DYU-XQ-qgE" firstAttribute="centerX" secondItem="26j-GP-S1X" secondAttribute="centerX" id="UuG-PX-tG5"/>
                                     <constraint firstItem="0W8-Ce-7bq" firstAttribute="top" secondItem="YCm-rP-30g" secondAttribute="bottom" id="Vta-ux-OPh"/>
                                     <constraint firstItem="DYU-XQ-qgE" firstAttribute="top" secondItem="0W8-Ce-7bq" secondAttribute="bottom" id="XmC-ya-Prp"/>
                                     <constraint firstAttribute="trailing" secondItem="3oR-kS-F5x" secondAttribute="trailing" id="g1A-en-ss5"/>
-                                    <constraint firstAttribute="trailing" secondItem="YCm-rP-30g" secondAttribute="trailing" constant="11" id="mZv-Wz-Gty"/>
                                     <constraint firstItem="YCm-rP-30g" firstAttribute="top" secondItem="26j-GP-S1X" secondAttribute="top" constant="5" id="uPz-KH-uNv"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0W8-Ce-7bq" secondAttribute="trailing" constant="59" id="zXy-YF-3ct"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -560,6 +556,7 @@
                         <constraints>
                             <constraint firstItem="jZM-nM-wRn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="013-jq-dWe"/>
                             <constraint firstItem="26j-GP-S1X" firstAttribute="top" secondItem="jZM-nM-wRn" secondAttribute="bottom" constant="8" symbolic="YES" id="Bc5-bc-n9p"/>
+                            <constraint firstItem="0W8-Ce-7bq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Gw2-fK-O2M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r6a-e8-FaT" secondAttribute="bottom" constant="15" id="Me0-w5-QBJ"/>
                             <constraint firstItem="26j-GP-S1X" firstAttribute="trailing" secondItem="jZM-nM-wRn" secondAttribute="trailing" id="NQl-EW-yxI"/>
                             <constraint firstItem="jZM-nM-wRn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Skx-ey-fqa"/>
@@ -755,13 +752,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taM-pc-q8K">
+                                <rect key="frame" x="57" y="601" width="300" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.98126249200000004" blue="0.45121387029999999" alpha="0.98367936639999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dlb-aF-mhd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="bRa-o8-nwp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Remove From My Events ">
+                                    <color key="titleColor" red="0.16548516329999999" green="0.38364334560000002" blue="0.93779743019999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeBtn:" destination="ql9-ar-IWS" eventType="touchUpInside" id="Mth-fn-wMj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="plD-Xj-guz" firstAttribute="top" secondItem="twT-xp-kIN" secondAttribute="top" id="1b2-dN-uAL"/>
                             <constraint firstItem="ykE-gG-XH9" firstAttribute="top" secondItem="yL1-me-nhU" secondAttribute="bottom" constant="30" id="5zn-Yc-Mfm"/>
                             <constraint firstItem="JlC-DQ-KvF" firstAttribute="centerX" secondItem="bph-G7-JUr" secondAttribute="centerX" id="6HC-JX-zlh"/>
+                            <constraint firstItem="taM-pc-q8K" firstAttribute="top" secondItem="ykE-gG-XH9" secondAttribute="bottom" constant="50" id="8Xg-hX-HYX"/>
                             <constraint firstItem="yL1-me-nhU" firstAttribute="top" secondItem="9qc-1h-j4F" secondAttribute="bottom" constant="15" id="9gt-LZ-P4G"/>
+                            <constraint firstItem="taM-pc-q8K" firstAttribute="centerX" secondItem="twT-xp-kIN" secondAttribute="centerX" id="F7F-Gz-5dD"/>
                             <constraint firstItem="twT-xp-kIN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ykE-gG-XH9" secondAttribute="trailing" constant="40" id="IPj-i1-UL2"/>
                             <constraint firstItem="9qc-1h-j4F" firstAttribute="top" secondItem="JlC-DQ-KvF" secondAttribute="bottom" constant="15" id="MoY-xD-KAU"/>
                             <constraint firstItem="bph-G7-JUr" firstAttribute="top" secondItem="plD-Xj-guz" secondAttribute="bottom" constant="15" id="PhH-dH-yDQ"/>
@@ -785,6 +799,7 @@
                         <outlet property="eventTitle" destination="bph-G7-JUr" id="siA-vt-U0Y"/>
                         <outlet property="location" destination="yL1-me-nhU" id="Ls7-e2-FYs"/>
                         <outlet property="picture" destination="plD-Xj-guz" id="GML-WY-Yol"/>
+                        <outlet property="removeBtn" destination="taM-pc-q8K" id="4A3-Sd-IFv"/>
                         <outlet property="time" destination="qd8-bI-S4h" id="d0u-v7-jlh"/>
                     </connections>
                 </viewController>
