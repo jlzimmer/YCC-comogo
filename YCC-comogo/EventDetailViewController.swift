@@ -13,7 +13,8 @@ class EventDetailViewController: UIViewController {
 
     @IBOutlet weak var removeBtn: UIButton!
     var dummyEvents: Event?
-    @IBOutlet weak var eventDes: UILabel!
+
+    @IBOutlet weak var eventDes: UITextView!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var time: UILabel!
@@ -37,10 +38,10 @@ class EventDetailViewController: UIViewController {
         
         picture.image=UIImage(named: "e2")
         eventTitle.text = actualEvent?.title
-//        let concatStartTime = (dummyEvents?.startTime)! + "  -"
-        time.text = "ahh"
+
+   
         location.text = actualEvent?.location
-       // eventDes.text = actualEvent?.description
+        eventDes.text = actualEvent?.eventDescription
         endTime.text = "AHHH"
         date.text = "November 28th 2018"
         // Do any additional setup after loading the view.
