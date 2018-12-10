@@ -19,7 +19,7 @@ class DeclinedEventDetailViewController: UIViewController {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var picture: UIImageView!
-    @IBOutlet weak var eventDes: UILabel!
+    @IBOutlet weak var eventDes: UITextView!
     @IBOutlet weak var addBtn: UIButton!
     
     let dateFormatter = DateFormatter()
@@ -50,7 +50,7 @@ class DeclinedEventDetailViewController: UIViewController {
         let concatStartTime = String(start) + "  -"
         startTime.text = concatStartTime
         location.text = dummyEvents?.location
-        eventDes.text = "JKFHKSJNDASKdmlkamsdlkasmdlkamdlkewmdkladmla"
+        eventDes.text = dummyEvents?.eventDescription
         endTime.text = String(end)
         eventDate.text = dateString
         // Do any additional setup after loading the view.
