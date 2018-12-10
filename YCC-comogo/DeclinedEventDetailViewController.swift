@@ -19,7 +19,6 @@ class DeclinedEventDetailViewController: UIViewController {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var picture: UIImageView!
-
     @IBOutlet weak var eventDes: UITextView!
     @IBOutlet weak var addBtn: UIButton!
     
