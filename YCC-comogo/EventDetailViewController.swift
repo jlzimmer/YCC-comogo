@@ -40,9 +40,9 @@ class EventDetailViewController: UIViewController {
         eventTitle.text = actualEvent?.title
 
    
-        location.text = actualEvent?.location
+        //location.text = actualEvent?.location
         eventDes.text = actualEvent?.eventDescription
-        endTime.text = "AHHH"
+       // endTime.text = "AHHH"
         date.text = "November 28th 2018"
         // Do any additional setup after loading the view.
         
