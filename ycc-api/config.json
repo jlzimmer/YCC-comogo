@@ -1,14 +1,14 @@
 {
-  "isProduction": false,
-  "address": "http://localhost:8000",
-  "mongoDbAddress": "mongodb://localhost/ycc-api",
-  "port": 8000,
+  "isProduction": true,
+  "address": "157.230.87.126",
+  "mongoDbAddress": "mongodb://127.0.0.1/ycc-api",
+  "port": 5050,
   "passportSecret": "whatarethose",
   "nodemailerConfig": {
     "service": "gmail",
     "auth": {
-      "user": "nathan.ortbals@gmail.com",
-      "pass": "Programming1!"
+      "user": "dwlockster@gmail.com",
+      "pass": "#notmypassword"
     }
   }
 }

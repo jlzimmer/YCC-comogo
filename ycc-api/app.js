@@ -41,7 +41,7 @@ passport.passportConfig();
 
 //Configure Mongoose
 mongoose.promise = global.Promise; //Configure mongoose's promise to global promise
-mongoose.connect(config.mongoDbAddress);
+mongoose.connect(config.mongoDbAddress, {useNewUrlParser:true});
 mongoose.set('debug', true);
 
 

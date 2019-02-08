@@ -13,8 +13,7 @@ students in the INFOTC 4500 class at the University of Missouri in 2018.
 
 ## Configuration
 
-Create a file called `config.json`  in the root project folder with the following configuration:
-
+Create a file called `config.json`  in the root project folder with the following configuration, an example config is provided:
 ```
 {
   "isProduction": [true or false],
@@ -32,7 +31,7 @@ Create a file called `config.json`  in the root project folder with the followin
  email verification
   
  * **mongoDbAddress** string value of the address to the local mongodb instance. This will most likely be 
- `"mongodb://localhost/ycc-api"`
+ `"mongodb://localhost/ycc-api" if you are local. On a production server, mongodb://127.0.0.1/ycc-api is likely your address.
   
  * **port** number value indicating what port the server should run on
   
