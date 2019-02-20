@@ -34,7 +34,19 @@ async function verifyUser(req, res, next) {
 async function verifyAdmin(req, res, next) {
   await getRoles();
 
-  if(req.user.role._id.equals(adminRole._id) || req.user.role._id.equals(superAdminRole._id)) {
+  var user_id = req.body.user.role
+  var super_admin_id = JSON.stringify(superAdminRole._id).replace(/\"/g, "")
+  var admin_id = JSON.stringify(adminRole._id).replace(/\"/g, "")
+
+  console.log("************")
+  console.log(user_id)
+  console.log(admin_id)
+  console.log(user_id.localeCompare(admin_id))
+  console.log("************")
+
+
+
+  if(user_id.localeCompare(admin_id) == 0 || user_id.localeCompare(super_admin_id) == 0) {
     next();
   }
   else {
