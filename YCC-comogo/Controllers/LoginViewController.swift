@@ -9,12 +9,21 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    let encoder = JSONEncoder()
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet var blueView: UIView!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
+    
+    @IBAction func login(_ sender: Any) {
+        
+        let request = ApiRequest()
+        let user = UserCreds.init(email: "dwlockster@gmail.com", password: "test123")
+        let data = try! encoder.encode(user)
+        request.execute(http_method: HTTPMethod.post, url_path: "auth/login", payload: data)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +41,7 @@ class LoginViewController: UIViewController {
         password.layer.cornerRadius = 20
         password.clipsToBounds = true
         
-     
+        
         navigationController?.setNavigationBarHidden(true, animated: true)
         
         loginBtn.backgroundColor = color2
@@ -42,22 +51,10 @@ class LoginViewController: UIViewController {
         registerBtn.setTitleColor(color1, for: .normal)
         
         blueView.backgroundColor = color1
-    
         
-        // Do any additional setup after loading the view.
+        
+
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 

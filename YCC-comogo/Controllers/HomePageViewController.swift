@@ -35,6 +35,7 @@ class HomePageViewController: BaseViewController{
     
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchStoredEvents()
@@ -66,10 +67,11 @@ class HomePageViewController: BaseViewController{
         //function to display Actual event information
         showEvents()
     }
+    
     //Each time the view appears, we fetch from our stored events, query our API for new pulls, and then display
     override func viewDidAppear(_ animated: Bool) {
         fetchStoredEvents() //provides a reference to all of our locally stored eventss
-        getFromAPI() //updates local storage with new events.
+//        getFromAPI() //updates local storage with new events.
         populateDisplayableEvents()
         
     }
@@ -164,11 +166,11 @@ class HomePageViewController: BaseViewController{
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
+        
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
         do {
             myEvents = try managedContext.fetch(fetchRequest)
-            print(myEvents.count)
             
         } catch {
             print("Error: Fetch could not be performed")
@@ -179,6 +181,7 @@ class HomePageViewController: BaseViewController{
     //Edit event data so that it is favorited.
     func acceptEvent(index: Int){
         let eventToBeModified = eventsToDisplay[index]
+//        print(eventsToDisplay)
         let ident = eventToBeModified.id!
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -231,10 +234,15 @@ class HomePageViewController: BaseViewController{
     }
     
     func getFromAPI(){
-        let jsonUrlString = "https://ycc-api.herokuapp.com/api/event/"
+        let jsonUrlString = "http://157.230.87.126:6060/api/event"
         guard let url = URL(string: jsonUrlString) else {return}
         var request = URLRequest(url: url)
-        request.addValue("JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdHRlbmRpbmdFdmVudHMiOltdLCJob3N0aW5nRXZlbnRzIjpbXSwiX2lkIjoiNWMwNmM2MGJmNmU1ZWYwMDE2ODk1OTc4IiwiZW1haWwiOiJuYXRoYW4ub3J0YmFsc0BnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJOYXRoYW4iLCJsYXN0TmFtZSI6Ik9ydGJhbHMiLCJwYXNzd29yZCI6IiQyYiQxMCRCY2YvVjNDR1gucnJLN0ZKd2doaENlRDlJb0tJV3hPQmJaSzJGUVNxeGxsYnJSeGkxa0MwTyIsInBob25lTnVtYmVyIjoiMzMzNDU2MTIzNCIsInJvbGUiOiI1YzA2YzdjNmY2ZTVlZjAwMTY4OTU5N2EiLCJ2YWxpZGF0aW9uS2V5IjoiNWMwNmM2MGJmNmU1ZWYwMDE2ODk1OTc5IiwiX192IjowLCJpYXQiOjE1NDM5NDkyMDl9.arf9m2SkJAhOjdHh8Tq3lqLRDfDgEYoE4frWiPvlh_w",forHTTPHeaderField: "Authorization")
+        request.addValue("JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdHRlbmRpbmdFdmVudHMiOltdLCJob3N0aW5nRXZlbnRzIjpbIjVjNzQ1OWVkYjFhZDBlMmExOGJjZmY2MSJdLCJfaWQiOiI1YzZkYzE0OTcxMjY3NDJlYTg4ZDJjMmIiLCJlbWFpbCI6ImR3bG9ja3N0ZXJAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiRGFuaWVsIiwibGFzdE5hbWUiOiJMb2NrIiwicGFzc3dvcmQiOiIkMmIkMTAkcWl5c1QydFltQW1EMTJXdzB2bUMzT01UcGJ5UzJkYmhmeW1kUFgxY29tczZlTGUuMTNncm0iLCJwaG9uZU51bWJlciI6IjMzMzQ1NjEyMzQiLCJyb2xlIjoiNWM2ZGMxNDk3MTI2NzQyZWE4OGQyYzJjIiwidmFsaWRhdGlvbktleSI6IjVjNmRjMTQ5NzEyNjc0MmVhODhkMmMyZSIsIl9fdiI6MSwiaWF0IjoxNTUyODQ0MDI2fQ.go2ykaHT6K17ijrCIPqie2A0XY4RDhKUA_SHv9Y9V9Q",forHTTPHeaderField: "Authorization")
+        
+//        let jsonUrlString = "https://ycc-api.herokuapp.com/api/event/"
+//        guard let url = URL(string: jsonUrlString) else {return}
+//        var request = URLRequest(url: url)
+//        request.addValue("JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdHRlbmRpbmdFdmVudHMiOltdLCJob3N0aW5nRXZlbnRzIjpbXSwiX2lkIjoiNWMwNmM2MGJmNmU1ZWYwMDE2ODk1OTc4IiwiZW1haWwiOiJuYXRoYW4ub3J0YmFsc0BnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJOYXRoYW4iLCJsYXN0TmFtZSI6Ik9ydGJhbHMiLCJwYXNzd29yZCI6IiQyYiQxMCRCY2YvVjNDR1gucnJLN0ZKd2doaENlRDlJb0tJV3hPQmJaSzJGUVNxeGxsYnJSeGkxa0MwTyIsInBob25lTnVtYmVyIjoiMzMzNDU2MTIzNCIsInJvbGUiOiI1YzA2YzdjNmY2ZTVlZjAwMTY4OTU5N2EiLCJ2YWxpZGF0aW9uS2V5IjoiNWMwNmM2MGJmNmU1ZWYwMDE2ODk1OTc5IiwiX192IjowLCJpYXQiOjE1NDM5NDkyMDl9.arf9m2SkJAhOjdHh8Tq3lqLRDfDgEYoE4frWiPvlh_w",forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request){(data,response,err) in
             guard err == nil else{
@@ -244,11 +252,11 @@ class HomePageViewController: BaseViewController{
             guard let data = data else {return}
             do {
                 let decoder = JSONDecoder()
-                
+
                 decoder.dateDecodingStrategy =   .custom({ (decoder) -> Date in
                     let container = try decoder.singleValueContainer()
                     let dateStr = try container.decode(String.self)
-                    
+
                     let formatter = DateFormatter()
                     formatter.calendar = Calendar(identifier: .iso8601)
                     formatter.locale = Locale(identifier: "en_US_POSIX")
@@ -267,8 +275,9 @@ class HomePageViewController: BaseViewController{
                 for event in events{
                     self.saveEvent(newEvent: event)
                 }
+                print(events)
             } catch {
-                print("hmm: \(error)")
+//                print("hmm: \(error)")
             }
             
             }.resume()
