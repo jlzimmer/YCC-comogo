@@ -50,7 +50,9 @@ router.post('/register', validation.postRegister, asyncWrapper(async function(re
 }));
 
 /* LOGIN USER */
-router.post('/login', validation.postLogin, asyncWrapper(async function(req, res) {
+router.post('/login', /*validation.postLogin,*/ asyncWrapper(async function(req, res) {
+
+  console.log(req.body)
 
   const user = await User.findOne({email: req.body.email});
 
