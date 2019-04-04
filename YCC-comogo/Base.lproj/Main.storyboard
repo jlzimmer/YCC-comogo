@@ -49,7 +49,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
-                                            <segue destination="NPC-HH-qmc" kind="show" id="Mn8-Jh-HJB"/>
+                                            <action selector="login:" destination="DgJ-CN-0Zx" eventType="touchUpInside" id="quh-Mq-IJg"/>
+                                            <segue destination="NPC-HH-qmc" kind="show" id="mhL-Do-QbE"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="7O4-9E-b35">
@@ -1026,7 +1027,7 @@
         <image name="password" width="491.51998901367188" height="491.51998901367188"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D0k-Ik-AoS"/>
+        <segue reference="mhL-Do-QbE"/>
         <segue reference="RXn-IL-bit"/>
     </inferredMetricsTieBreakers>
 </document>

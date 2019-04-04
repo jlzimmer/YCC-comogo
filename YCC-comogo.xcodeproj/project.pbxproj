@@ -12,10 +12,12 @@
 		59F0FCAD21921DE400DD5C78 /* YCC_comogo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59F0FCAB21921DE400DD5C78 /* YCC_comogo.xcdatamodeld */; };
 		59F0FCAF21921DE600DD5C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F0FCAE21921DE600DD5C78 /* Assets.xcassets */; };
 		59F0FCB221921DE600DD5C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59F0FCB021921DE600DD5C78 /* LaunchScreen.storyboard */; };
-		63F88CAC21B4FDDC0077F553 /* DecodableEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F88CAB21B4FDDC0077F553 /* DecodableEvent.swift */; };
+		63F88CAC21B4FDDC0077F553 /* YccEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F88CAB21B4FDDC0077F553 /* YccEvent.swift */; };
 		63FB81C921B3A8E500A71AD3 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FB81C721B3A8E500A71AD3 /* Event+CoreDataClass.swift */; };
 		63FB81CA21B3A8E500A71AD3 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FB81C821B3A8E500A71AD3 /* Event+CoreDataProperties.swift */; };
 		6B5579B721ADD19E0063A910 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5579B621ADD19E0063A910 /* placeholder.jpg */; };
+		94B105BE22498DCB000E7413 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B105BD22498DCB000E7413 /* ApiRequest.swift */; };
+		94B105C12249B118000E7413 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B105C02249B118000E7413 /* LoginUser.swift */; };
 		C931E9CB21AF9AB200CF8248 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931E9CA21AF9AB200CF8248 /* MyEventsViewController.swift */; };
 		C931E9CD21AF9B6D00CF8248 /* DummyEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931E9CC21AF9B6D00CF8248 /* DummyEvents.swift */; };
 		C931E9CF21AF9C7E00CF8248 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931E9CE21AF9C7E00CF8248 /* EventTableViewCell.swift */; };
@@ -37,10 +39,12 @@
 		59F0FCAE21921DE600DD5C78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59F0FCB121921DE600DD5C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59F0FCB321921DE600DD5C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63F88CAB21B4FDDC0077F553 /* DecodableEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableEvent.swift; sourceTree = "<group>"; };
+		63F88CAB21B4FDDC0077F553 /* YccEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YccEvent.swift; sourceTree = "<group>"; };
 		63FB81C721B3A8E500A71AD3 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
 		63FB81C821B3A8E500A71AD3 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6B5579B621ADD19E0063A910 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = SOURCE_ROOT; };
+		94B105BD22498DCB000E7413 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		94B105C02249B118000E7413 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		C931E9CA21AF9AB200CF8248 /* MyEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
 		C931E9CC21AF9B6D00CF8248 /* DummyEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyEvents.swift; sourceTree = "<group>"; };
 		C931E9CE21AF9C7E00CF8248 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,22 +88,10 @@
 		59F0FCA321921DE400DD5C78 /* YCC-comogo */ = {
 			isa = PBXGroup;
 			children = (
-				63FB81C721B3A8E500A71AD3 /* Event+CoreDataClass.swift */,
-				63FB81C821B3A8E500A71AD3 /* Event+CoreDataProperties.swift */,
+				94BC0C4B2253E0960036F686 /* Controllers */,
+				94B105BF2249B0F2000E7413 /* Models */,
 				59F0FCA821921DE400DD5C78 /* Main.storyboard */,
-				C9AF710721B49A7400CC277B /* LoginViewController.swift */,
-				C931E9CA21AF9AB200CF8248 /* MyEventsViewController.swift */,
-				C9AF710321B1E9B400CC277B /* DeclinedEventsViewController.swift */,
-				C931E9CE21AF9C7E00CF8248 /* EventTableViewCell.swift */,
-				C9AF710921B5DC9900CC277B /* RegisterViewController.swift */,
-				C931E9CC21AF9B6D00CF8248 /* DummyEvents.swift */,
-				C9AF70FD21AFB27600CC277B /* HomePageViewController.swift */,
-				C9AF710121B1A8DA00CC277B /* BaseViewController.swift */,
-				C9AF710521B1EBDC00CC277B /* DeclinedEventDetailViewController.swift */,
-				C9AF70FB21AFA48B00CC277B /* EventDetailViewController.swift */,
-				C9AF70FF21B1A63900CC277B /* MenuViewController.swift */,
 				59F0FCA421921DE400DD5C78 /* AppDelegate.swift */,
-				63F88CAB21B4FDDC0077F553 /* DecodableEvent.swift */,
 				59F0FCAE21921DE600DD5C78 /* Assets.xcassets */,
 				59F0FCB021921DE600DD5C78 /* LaunchScreen.storyboard */,
 				59F0FCB321921DE600DD5C78 /* Info.plist */,
@@ -107,6 +99,36 @@
 				6B5579B621ADD19E0063A910 /* placeholder.jpg */,
 			);
 			path = "YCC-comogo";
+			sourceTree = "<group>";
+		};
+		94B105BF2249B0F2000E7413 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63F88CAB21B4FDDC0077F553 /* YccEvent.swift */,
+				63FB81C821B3A8E500A71AD3 /* Event+CoreDataProperties.swift */,
+				C931E9CE21AF9C7E00CF8248 /* EventTableViewCell.swift */,
+				63FB81C721B3A8E500A71AD3 /* Event+CoreDataClass.swift */,
+				C931E9CC21AF9B6D00CF8248 /* DummyEvents.swift */,
+				94B105BD22498DCB000E7413 /* ApiRequest.swift */,
+				94B105C02249B118000E7413 /* LoginUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94BC0C4B2253E0960036F686 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C931E9CA21AF9AB200CF8248 /* MyEventsViewController.swift */,
+				C9AF70FD21AFB27600CC277B /* HomePageViewController.swift */,
+				C9AF710121B1A8DA00CC277B /* BaseViewController.swift */,
+				C9AF710721B49A7400CC277B /* LoginViewController.swift */,
+				C9AF70FF21B1A63900CC277B /* MenuViewController.swift */,
+				C9AF70FB21AFA48B00CC277B /* EventDetailViewController.swift */,
+				C9AF710321B1E9B400CC277B /* DeclinedEventsViewController.swift */,
+				C9AF710921B5DC9900CC277B /* RegisterViewController.swift */,
+				C9AF710521B1EBDC00CC277B /* DeclinedEventDetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +203,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94B105C12249B118000E7413 /* LoginUser.swift in Sources */,
 				C9AF710821B49A7400CC277B /* LoginViewController.swift in Sources */,
 				C9AF70FC21AFA48B00CC277B /* EventDetailViewController.swift in Sources */,
 				C9AF70FE21AFB27600CC277B /* HomePageViewController.swift in Sources */,
 				59F0FCA521921DE400DD5C78 /* AppDelegate.swift in Sources */,
 				C931E9CD21AF9B6D00CF8248 /* DummyEvents.swift in Sources */,
-				63F88CAC21B4FDDC0077F553 /* DecodableEvent.swift in Sources */,
+				63F88CAC21B4FDDC0077F553 /* YccEvent.swift in Sources */,
 				C931E9CB21AF9AB200CF8248 /* MyEventsViewController.swift in Sources */,
 				C9AF710221B1A8DA00CC277B /* BaseViewController.swift in Sources */,
 				63FB81CA21B3A8E500A71AD3 /* Event+CoreDataProperties.swift in Sources */,
@@ -197,6 +220,7 @@
 				59F0FCAD21921DE400DD5C78 /* YCC_comogo.xcdatamodeld in Sources */,
 				63FB81C921B3A8E500A71AD3 /* Event+CoreDataClass.swift in Sources */,
 				C9AF710021B1A63900CC277B /* MenuViewController.swift in Sources */,
+				94B105BE22498DCB000E7413 /* ApiRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,13 +367,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZ96SQU44Y;
+				DEVELOPMENT_TEAM = PPMUESBT2M;
 				INFOPLIST_FILE = "YCC-comogo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.missouri.YCC-comogo-test";
+				PRODUCT_BUNDLE_IDENTIFIER = dwlockster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,13 +385,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZ96SQU44Y;
+				DEVELOPMENT_TEAM = PPMUESBT2M;
 				INFOPLIST_FILE = "YCC-comogo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.missouri.YCC-comogo-test";
+				PRODUCT_BUNDLE_IDENTIFIER = dwlockster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
